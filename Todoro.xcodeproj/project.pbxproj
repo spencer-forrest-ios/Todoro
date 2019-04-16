@@ -10,8 +10,6 @@
 		5936A38F2266514D00023586 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5936A38B2266507A00023586 /* Presenter.swift */; };
 		5936A3902266514D00023586 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5936A38B2266507A00023586 /* Presenter.swift */; };
 		5936A3912266571A00023586 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D2226588C80028EAD4 /* ViewController.swift */; };
-		5936A39422665AA000023586 /* PomodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5988B6B2225FAE5B0034F848 /* PomodoroTests.swift */; };
-		5936A39522665AA200023586 /* InteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5940803B22628E9100E9513A /* InteractorTests.swift */; };
 		593A00D9226588C80028EAD4 /* Pomodoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D1226588C80028EAD4 /* Pomodoro.swift */; };
 		593A00DA226588C80028EAD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D2226588C80028EAD4 /* ViewController.swift */; };
 		593A00E022658B180028EAD4 /* Pomodoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D1226588C80028EAD4 /* Pomodoro.swift */; };
@@ -29,6 +27,8 @@
 		5988B6A5225FAE5B0034F848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5988B6A4225FAE5B0034F848 /* Assets.xcassets */; };
 		5988B6A8225FAE5B0034F848 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5988B6A6225FAE5B0034F848 /* LaunchScreen.storyboard */; };
 		5988B6B3225FAE5B0034F848 /* PomodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5988B6B2225FAE5B0034F848 /* PomodoroTests.swift */; };
+		59AA4C43226677B30006A24B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AA4C42226677B30006A24B /* DataController.swift */; };
+		59AA4C44226677BF0006A24B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AA4C42226677B30006A24B /* DataController.swift */; };
 		59BDED8122636F3400FFBB69 /* OutputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BDED8022636F3400FFBB69 /* OutputBoundary.swift */; };
 		59BDED8222636F3400FFBB69 /* OutputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BDED8022636F3400FFBB69 /* OutputBoundary.swift */; };
 		59BDED842263819B00FFBB69 /* InputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BDED832263819B00FFBB69 /* InputBoundary.swift */; };
@@ -63,6 +63,7 @@
 		5988B6AE225FAE5B0034F848 /* TodoroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5988B6B2225FAE5B0034F848 /* PomodoroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTests.swift; sourceTree = "<group>"; };
 		5988B6B4225FAE5B0034F848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59AA4C42226677B30006A24B /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		59BDED8022636F3400FFBB69 /* OutputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputBoundary.swift; sourceTree = "<group>"; };
 		59BDED832263819B00FFBB69 /* InputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBoundary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,7 +143,7 @@
 			children = (
 				5988B69A225FAE5A0034F848 /* AppDelegate.swift */,
 				5936A3922266592000023586 /* Pomodoro */,
-				5988B6A1225FAE5A0034F848 /* Todoro.xcdatamodeld */,
+				59AA4C45226677EB0006A24B /* Persistency */,
 				5940803822628AB400E9513A /* Constant.swift */,
 				5936A3932266598100023586 /* Supporting Files */,
 			);
@@ -156,6 +157,15 @@
 				5988B6B4225FAE5B0034F848 /* Info.plist */,
 			);
 			path = TodoroTests;
+			sourceTree = "<group>";
+		};
+		59AA4C45226677EB0006A24B /* Persistency */ = {
+			isa = PBXGroup;
+			children = (
+				59AA4C42226677B30006A24B /* DataController.swift */,
+				5988B6A1225FAE5A0034F848 /* Todoro.xcdatamodeld */,
+			);
+			path = Persistency;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,12 +270,11 @@
 				59408031226284A600E9513A /* UserPreferenceImplementation.swift in Sources */,
 				5988B6A3225FAE5A0034F848 /* Todoro.xcdatamodeld in Sources */,
 				593A00D9226588C80028EAD4 /* Pomodoro.swift in Sources */,
-				5936A39422665AA000023586 /* PomodoroTests.swift in Sources */,
 				59BDED842263819B00FFBB69 /* InputBoundary.swift in Sources */,
 				5936A38F2266514D00023586 /* Presenter.swift in Sources */,
 				5940803922628AB400E9513A /* Constant.swift in Sources */,
+				59AA4C43226677B30006A24B /* DataController.swift in Sources */,
 				59BDED8122636F3400FFBB69 /* OutputBoundary.swift in Sources */,
-				5936A39522665AA200023586 /* InteractorTests.swift in Sources */,
 				5984E1B022617646009C5CFC /* Interactor.swift in Sources */,
 				594080332262864800E9513A /* UserPreference.swift in Sources */,
 				5988B69B225FAE5A0034F848 /* AppDelegate.swift in Sources */,
@@ -278,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59BDED852263819B00FFBB69 /* InputBoundary.swift in Sources */,
+				59AA4C44226677BF0006A24B /* DataController.swift in Sources */,
 				59BDED8222636F3400FFBB69 /* OutputBoundary.swift in Sources */,
 				5984E1B122617646009C5CFC /* Interactor.swift in Sources */,
 				594080342262864800E9513A /* UserPreference.swift in Sources */,
