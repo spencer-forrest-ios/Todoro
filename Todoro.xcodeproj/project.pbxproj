@@ -129,6 +129,7 @@
 		59C6131A226AADB700B4D5EA /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		59EF2AD122826E0F00249944 /* UserNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotification.swift; sourceTree = "<group>"; };
 		59EF2AD422826E9D00249944 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		59F511A622A32C8D00766603 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +296,7 @@
 				5988B699225FAE5A0034F848 /* Todoro */,
 				5988B6B1225FAE5B0034F848 /* TodoroTests */,
 				5988B698225FAE5A0034F848 /* Products */,
+				59F511A622A32C8D00766603 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
