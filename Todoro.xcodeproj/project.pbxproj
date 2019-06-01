@@ -7,32 +7,74 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5936A38F2266514D00023586 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5936A38B2266507A00023586 /* Presenter.swift */; };
-		5936A3902266514D00023586 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5936A38B2266507A00023586 /* Presenter.swift */; };
-		5936A3912266571A00023586 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D2226588C80028EAD4 /* ViewController.swift */; };
-		593A00D9226588C80028EAD4 /* Pomodoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D1226588C80028EAD4 /* Pomodoro.swift */; };
-		593A00DA226588C80028EAD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D2226588C80028EAD4 /* ViewController.swift */; };
-		593A00E022658B180028EAD4 /* Pomodoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D1226588C80028EAD4 /* Pomodoro.swift */; };
-		593A153C2262C221009F9D66 /* UserPreferenceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408030226284A600E9513A /* UserPreferenceImplementation.swift */; };
-		59408031226284A600E9513A /* UserPreferenceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408030226284A600E9513A /* UserPreferenceImplementation.swift */; };
-		594080332262864800E9513A /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594080322262864800E9513A /* UserPreference.swift */; };
-		594080342262864800E9513A /* UserPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594080322262864800E9513A /* UserPreference.swift */; };
-		5940803922628AB400E9513A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5940803822628AB400E9513A /* Constant.swift */; };
-		5940803A22628AB400E9513A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5940803822628AB400E9513A /* Constant.swift */; };
-		5940803C22628E9100E9513A /* InteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5940803B22628E9100E9513A /* InteractorTests.swift */; };
-		5984E1B022617646009C5CFC /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984E1AF22617646009C5CFC /* Interactor.swift */; };
-		5984E1B122617646009C5CFC /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984E1AF22617646009C5CFC /* Interactor.swift */; };
+		5906A1A5226F992200CD61D0 /* Factory+Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5906A1A4226F992200CD61D0 /* Factory+Implementation.swift */; };
+		5906A1A6226F9DF000CD61D0 /* Factory+Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5906A1A4226F992200CD61D0 /* Factory+Implementation.swift */; };
+		5906A1A8226FA3F300CD61D0 /* PomodoroParameter+Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5906A1A7226FA3F300CD61D0 /* PomodoroParameter+Implementation.swift */; };
+		5906A1A9226FBE7500CD61D0 /* PomodoroParameter+Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5906A1A7226FA3F300CD61D0 /* PomodoroParameter+Implementation.swift */; };
+		591C775B22A2F23600E6DBA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591C775A22A2F23600E6DBA8 /* Assets.xcassets */; };
+		5928DB7222886CC300E8EF9D /* NotificationManager+Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5928DB7122886CC300E8EF9D /* NotificationManager+Implementation.swift */; };
+		5928DB7322886CC300E8EF9D /* NotificationManager+Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5928DB7122886CC300E8EF9D /* NotificationManager+Implementation.swift */; };
+		592A176E22949AF300B7F675 /* ParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A176D22949AF200B7F675 /* ParameterViewController.swift */; };
+		592A176F22949AF300B7F675 /* ParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A176D22949AF200B7F675 /* ParameterViewController.swift */; };
+		592A17712295B80500B7F675 /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A17702295B80500B7F675 /* ParameterView.swift */; };
+		592A17722295B80500B7F675 /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A17702295B80500B7F675 /* ParameterView.swift */; };
+		592A17742295F95100B7F675 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A17732295F95100B7F675 /* String.swift */; };
+		592A17752295F95100B7F675 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A17732295F95100B7F675 /* String.swift */; };
+		59347E5B22835D6A0077396E /* UnauthorizedUserNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59347E5A22835D6A0077396E /* UnauthorizedUserNotificationView.swift */; };
+		59347E5C22835F2A0077396E /* UnauthorizedUserNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59347E5A22835D6A0077396E /* UnauthorizedUserNotificationView.swift */; };
+		59364CF5227E15CE003214B3 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D1226588C80028EAD4 /* Timer.swift */; };
+		5936A38F2266514D00023586 /* PomodoroPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5936A38B2266507A00023586 /* PomodoroPresenter.swift */; };
+		5936A3902266514D00023586 /* PomodoroPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5936A38B2266507A00023586 /* PomodoroPresenter.swift */; };
+		5936A3912266571A00023586 /* PomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D2226588C80028EAD4 /* PomodoroViewController.swift */; };
+		593A00D9226588C80028EAD4 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D1226588C80028EAD4 /* Timer.swift */; };
+		593A00DA226588C80028EAD4 /* PomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D2226588C80028EAD4 /* PomodoroViewController.swift */; };
+		593A153C2262C221009F9D66 /* PomodoroParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408030226284A600E9513A /* PomodoroParameter.swift */; };
+		593E205A2272B93E006F7173 /* PomodoroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597E50A72272A268001E374D /* PomodoroView.swift */; };
+		593E205B2272B943006F7173 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597E50AA2272A63D001E374D /* NSLayoutConstraint.swift */; };
+		59408031226284A600E9513A /* PomodoroParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408030226284A600E9513A /* PomodoroParameter.swift */; };
+		594080332262864800E9513A /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594080322262864800E9513A /* Parameter.swift */; };
+		594080342262864800E9513A /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594080322262864800E9513A /* Parameter.swift */; };
+		5940803C22628E9100E9513A /* PomodorUserPreferenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5940803B22628E9100E9513A /* PomodorUserPreferenceTests.swift */; };
+		594F95E4226D6761002581D8 /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594F95E3226D6761002581D8 /* UserInterface.swift */; };
+		594F95E5226D6761002581D8 /* UserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594F95E3226D6761002581D8 /* UserInterface.swift */; };
+		59550FBF2273DD8400F48DEC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59550FBE2273DD8400F48DEC /* UIColor.swift */; };
+		59550FC02273DDC800F48DEC /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59550FBE2273DD8400F48DEC /* UIColor.swift */; };
+		595B49C7226D768900D84EE8 /* PomodoroViewController+Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B49C6226D768900D84EE8 /* PomodoroViewController+Implementation.swift */; };
+		595B49C8226D768900D84EE8 /* PomodoroViewController+Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595B49C6226D768900D84EE8 /* PomodoroViewController+Implementation.swift */; };
+		596BBF97226BA9DB006962DE /* PomodoroUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596BBF96226BA9DB006962DE /* PomodoroUseCaseTests.swift */; };
+		596DB6B42298A8CD00E293FF /* ParameterInputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596DB6B32298A8CD00E293FF /* ParameterInputBoundary.swift */; };
+		596DB6B52298A8CD00E293FF /* ParameterInputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596DB6B32298A8CD00E293FF /* ParameterInputBoundary.swift */; };
+		596DB6B72298AA3E00E293FF /* ParameterOutputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596DB6B62298AA3E00E293FF /* ParameterOutputBoundary.swift */; };
+		596DB6B82298AA3E00E293FF /* ParameterOutputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596DB6B62298AA3E00E293FF /* ParameterOutputBoundary.swift */; };
+		596DB6BA2298AA6D00E293FF /* ParameterUserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596DB6B92298AA6D00E293FF /* ParameterUserInterface.swift */; };
+		596DB6BB2298AA6D00E293FF /* ParameterUserInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596DB6B92298AA6D00E293FF /* ParameterUserInterface.swift */; };
+		596DB6BD2298AA8E00E293FF /* ParameterViewController+Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596DB6BC2298AA8E00E293FF /* ParameterViewController+Implementation.swift */; };
+		596DB6BE2298AA8E00E293FF /* ParameterViewController+Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596DB6BC2298AA8E00E293FF /* ParameterViewController+Implementation.swift */; };
+		596DB6C02298AB0F00E293FF /* ParameterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596DB6BF2298AB0F00E293FF /* ParameterPresenter.swift */; };
+		596DB6C12298AB0F00E293FF /* ParameterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596DB6BF2298AB0F00E293FF /* ParameterPresenter.swift */; };
+		596DB6C62298AB9300E293FF /* ParameterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596DB6C52298AB9300E293FF /* ParameterUseCase.swift */; };
+		596DB6C72298AB9300E293FF /* ParameterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596DB6C52298AB9300E293FF /* ParameterUseCase.swift */; };
+		597E50A82272A268001E374D /* PomodoroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597E50A72272A268001E374D /* PomodoroView.swift */; };
+		597E50AB2272A63D001E374D /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597E50AA2272A63D001E374D /* NSLayoutConstraint.swift */; };
+		5984E1B022617646009C5CFC /* PomodoroUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984E1AF22617646009C5CFC /* PomodoroUseCase.swift */; };
+		5984E1B122617646009C5CFC /* PomodoroUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984E1AF22617646009C5CFC /* PomodoroUseCase.swift */; };
 		5988B69B225FAE5A0034F848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5988B69A225FAE5A0034F848 /* AppDelegate.swift */; };
-		5988B6A3225FAE5A0034F848 /* Todoro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5988B6A1225FAE5A0034F848 /* Todoro.xcdatamodeld */; };
-		5988B6A5225FAE5B0034F848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5988B6A4225FAE5B0034F848 /* Assets.xcassets */; };
 		5988B6A8225FAE5B0034F848 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5988B6A6225FAE5B0034F848 /* LaunchScreen.storyboard */; };
-		5988B6B3225FAE5B0034F848 /* PomodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5988B6B2225FAE5B0034F848 /* PomodoroTests.swift */; };
-		59AA4C43226677B30006A24B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AA4C42226677B30006A24B /* DataController.swift */; };
-		59AA4C44226677BF0006A24B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AA4C42226677B30006A24B /* DataController.swift */; };
+		5988B6B3225FAE5B0034F848 /* TimeKeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5988B6B2225FAE5B0034F848 /* TimeKeeperTests.swift */; };
 		59BDED8122636F3400FFBB69 /* OutputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BDED8022636F3400FFBB69 /* OutputBoundary.swift */; };
 		59BDED8222636F3400FFBB69 /* OutputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BDED8022636F3400FFBB69 /* OutputBoundary.swift */; };
 		59BDED842263819B00FFBB69 /* InputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BDED832263819B00FFBB69 /* InputBoundary.swift */; };
 		59BDED852263819B00FFBB69 /* InputBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BDED832263819B00FFBB69 /* InputBoundary.swift */; };
+		59C61315226AA7CA00B4D5EA /* PomodoUseCase+Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C61314226AA7CA00B4D5EA /* PomodoUseCase+Implementation.swift */; };
+		59C61316226AA7CA00B4D5EA /* PomodoUseCase+Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C61314226AA7CA00B4D5EA /* PomodoUseCase+Implementation.swift */; };
+		59C61318226AAD2900B4D5EA /* PomodoroPresenter+Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C61317226AAD2900B4D5EA /* PomodoroPresenter+Implementation.swift */; };
+		59C61319226AAD2900B4D5EA /* PomodoroPresenter+Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C61317226AAD2900B4D5EA /* PomodoroPresenter+Implementation.swift */; };
+		59C6131B226AADB700B4D5EA /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C6131A226AADB700B4D5EA /* Factory.swift */; };
+		59C6131C226AADB700B4D5EA /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C6131A226AADB700B4D5EA /* Factory.swift */; };
+		59EF2AD222826E0F00249944 /* UserNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF2AD122826E0F00249944 /* UserNotification.swift */; };
+		59EF2AD322826E0F00249944 /* UserNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF2AD122826E0F00249944 /* UserNotification.swift */; };
+		59EF2AD522826E9D00249944 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF2AD422826E9D00249944 /* NotificationManager.swift */; };
+		59EF2AD622826E9D00249944 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF2AD422826E9D00249944 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,26 +88,47 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5936A38B2266507A00023586 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		593A00D1226588C80028EAD4 /* Pomodoro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pomodoro.swift; sourceTree = "<group>"; };
-		593A00D2226588C80028EAD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		59408030226284A600E9513A /* UserPreferenceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferenceImplementation.swift; sourceTree = "<group>"; };
-		594080322262864800E9513A /* UserPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreference.swift; sourceTree = "<group>"; };
-		5940803822628AB400E9513A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		5940803B22628E9100E9513A /* InteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorTests.swift; sourceTree = "<group>"; };
-		5984E1AF22617646009C5CFC /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		5906A1A4226F992200CD61D0 /* Factory+Implementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Factory+Implementation.swift"; sourceTree = "<group>"; };
+		5906A1A7226FA3F300CD61D0 /* PomodoroParameter+Implementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PomodoroParameter+Implementation.swift"; sourceTree = "<group>"; };
+		591C775A22A2F23600E6DBA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5928DB7122886CC300E8EF9D /* NotificationManager+Implementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationManager+Implementation.swift"; sourceTree = "<group>"; };
+		592A176D22949AF200B7F675 /* ParameterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterViewController.swift; sourceTree = "<group>"; };
+		592A17702295B80500B7F675 /* ParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
+		592A17732295F95100B7F675 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		59347E5A22835D6A0077396E /* UnauthorizedUserNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthorizedUserNotificationView.swift; sourceTree = "<group>"; };
+		5936A38B2266507A00023586 /* PomodoroPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroPresenter.swift; sourceTree = "<group>"; };
+		593A00D1226588C80028EAD4 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		593A00D2226588C80028EAD4 /* PomodoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroViewController.swift; sourceTree = "<group>"; };
+		59408030226284A600E9513A /* PomodoroParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroParameter.swift; sourceTree = "<group>"; };
+		594080322262864800E9513A /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
+		5940803B22628E9100E9513A /* PomodorUserPreferenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodorUserPreferenceTests.swift; sourceTree = "<group>"; };
+		594F95E3226D6761002581D8 /* UserInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInterface.swift; sourceTree = "<group>"; };
+		59550FBE2273DD8400F48DEC /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		595B49C6226D768900D84EE8 /* PomodoroViewController+Implementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PomodoroViewController+Implementation.swift"; sourceTree = "<group>"; };
+		596BBF96226BA9DB006962DE /* PomodoroUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroUseCaseTests.swift; sourceTree = "<group>"; };
+		596DB6B32298A8CD00E293FF /* ParameterInputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterInputBoundary.swift; sourceTree = "<group>"; };
+		596DB6B62298AA3E00E293FF /* ParameterOutputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterOutputBoundary.swift; sourceTree = "<group>"; };
+		596DB6B92298AA6D00E293FF /* ParameterUserInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterUserInterface.swift; sourceTree = "<group>"; };
+		596DB6BC2298AA8E00E293FF /* ParameterViewController+Implementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParameterViewController+Implementation.swift"; sourceTree = "<group>"; };
+		596DB6BF2298AB0F00E293FF /* ParameterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterPresenter.swift; sourceTree = "<group>"; };
+		596DB6C52298AB9300E293FF /* ParameterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterUseCase.swift; sourceTree = "<group>"; };
+		597E50A72272A268001E374D /* PomodoroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroView.swift; sourceTree = "<group>"; };
+		597E50AA2272A63D001E374D /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
+		5984E1AF22617646009C5CFC /* PomodoroUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroUseCase.swift; sourceTree = "<group>"; };
 		5988B697225FAE5A0034F848 /* Todoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5988B69A225FAE5A0034F848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5988B6A2225FAE5A0034F848 /* Todoro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todoro.xcdatamodel; sourceTree = "<group>"; };
-		5988B6A4225FAE5B0034F848 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5988B6A7225FAE5B0034F848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5988B6A9225FAE5B0034F848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5988B6AE225FAE5B0034F848 /* TodoroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5988B6B2225FAE5B0034F848 /* PomodoroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTests.swift; sourceTree = "<group>"; };
+		5988B6B2225FAE5B0034F848 /* TimeKeeperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeeperTests.swift; sourceTree = "<group>"; };
 		5988B6B4225FAE5B0034F848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59AA4C42226677B30006A24B /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		59BDED8022636F3400FFBB69 /* OutputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputBoundary.swift; sourceTree = "<group>"; };
 		59BDED832263819B00FFBB69 /* InputBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBoundary.swift; sourceTree = "<group>"; };
+		59C61314226AA7CA00B4D5EA /* PomodoUseCase+Implementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PomodoUseCase+Implementation.swift"; sourceTree = "<group>"; };
+		59C61317226AAD2900B4D5EA /* PomodoroPresenter+Implementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PomodoroPresenter+Implementation.swift"; sourceTree = "<group>"; };
+		59C6131A226AADB700B4D5EA /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		59EF2AD122826E0F00249944 /* UserNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotification.swift; sourceTree = "<group>"; };
+		59EF2AD422826E9D00249944 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,25 +149,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5936A3922266592000023586 /* Pomodoro */ = {
-			isa = PBXGroup;
-			children = (
-				593A00D1226588C80028EAD4 /* Pomodoro.swift */,
-				5984E1AF22617646009C5CFC /* Interactor.swift */,
-				594080322262864800E9513A /* UserPreference.swift */,
-				59408030226284A600E9513A /* UserPreferenceImplementation.swift */,
-				59BDED832263819B00FFBB69 /* InputBoundary.swift */,
-				59BDED8022636F3400FFBB69 /* OutputBoundary.swift */,
-				5936A38B2266507A00023586 /* Presenter.swift */,
-				593A00D2226588C80028EAD4 /* ViewController.swift */,
-			);
-			path = Pomodoro;
-			sourceTree = "<group>";
-		};
 		5936A3932266598100023586 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5988B6A4225FAE5B0034F848 /* Assets.xcassets */,
+				591C775A22A2F23600E6DBA8 /* Assets.xcassets */,
 				5988B6A6225FAE5B0034F848 /* LaunchScreen.storyboard */,
 				5988B6A9225FAE5B0034F848 /* Info.plist */,
 			);
@@ -114,10 +162,131 @@
 		5936A39622665AF700023586 /* Pomodoro */ = {
 			isa = PBXGroup;
 			children = (
-				5988B6B2225FAE5B0034F848 /* PomodoroTests.swift */,
-				5940803B22628E9100E9513A /* InteractorTests.swift */,
+				5988B6B2225FAE5B0034F848 /* TimeKeeperTests.swift */,
+				5940803B22628E9100E9513A /* PomodorUserPreferenceTests.swift */,
+				596BBF96226BA9DB006962DE /* PomodoroUseCaseTests.swift */,
 			);
 			path = Pomodoro;
+			sourceTree = "<group>";
+		};
+		596DB6AD2298A41300E293FF /* Parameter */ = {
+			isa = PBXGroup;
+			children = (
+				596DB6B12298A7E000E293FF /* User Interface Layer */,
+				596DB6B02298A7D600E293FF /* Presentation Layer */,
+				596DB6AF2298A7B900E293FF /* Business Layer */,
+			);
+			name = Parameter;
+			sourceTree = "<group>";
+		};
+		596DB6AF2298A7B900E293FF /* Business Layer */ = {
+			isa = PBXGroup;
+			children = (
+				596DB6B32298A8CD00E293FF /* ParameterInputBoundary.swift */,
+				596DB6B62298AA3E00E293FF /* ParameterOutputBoundary.swift */,
+				596DB6C52298AB9300E293FF /* ParameterUseCase.swift */,
+			);
+			name = "Business Layer";
+			sourceTree = "<group>";
+		};
+		596DB6B02298A7D600E293FF /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				596DB6B92298AA6D00E293FF /* ParameterUserInterface.swift */,
+				596DB6BF2298AB0F00E293FF /* ParameterPresenter.swift */,
+			);
+			name = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		596DB6B12298A7E000E293FF /* User Interface Layer */ = {
+			isa = PBXGroup;
+			children = (
+				596DB6B22298A7F100E293FF /* Views */,
+				592A176D22949AF200B7F675 /* ParameterViewController.swift */,
+				596DB6BC2298AA8E00E293FF /* ParameterViewController+Implementation.swift */,
+			);
+			name = "User Interface Layer";
+			sourceTree = "<group>";
+		};
+		596DB6B22298A7F100E293FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				592A17702295B80500B7F675 /* ParameterView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		597E509E2270E2D7001E374D /* Pomodoro */ = {
+			isa = PBXGroup;
+			children = (
+				59B9A319228DBBC90053EF20 /* User Interface Layer */,
+				597E509F2270E2F1001E374D /* Presentation Layer */,
+				597E50A02270E300001E374D /* Business Layer */,
+				597E50A12270E327001E374D /* Data Layer */,
+				59EF2AD022826DD300249944 /* UserNotifications */,
+			);
+			name = Pomodoro;
+			sourceTree = "<group>";
+		};
+		597E509F2270E2F1001E374D /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				594F95E3226D6761002581D8 /* UserInterface.swift */,
+				5936A38B2266507A00023586 /* PomodoroPresenter.swift */,
+				59C61317226AAD2900B4D5EA /* PomodoroPresenter+Implementation.swift */,
+			);
+			name = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		597E50A02270E300001E374D /* Business Layer */ = {
+			isa = PBXGroup;
+			children = (
+				59BDED832263819B00FFBB69 /* InputBoundary.swift */,
+				59BDED8022636F3400FFBB69 /* OutputBoundary.swift */,
+				594080322262864800E9513A /* Parameter.swift */,
+				59EF2AD122826E0F00249944 /* UserNotification.swift */,
+				593A00D1226588C80028EAD4 /* Timer.swift */,
+				5984E1AF22617646009C5CFC /* PomodoroUseCase.swift */,
+				59C61314226AA7CA00B4D5EA /* PomodoUseCase+Implementation.swift */,
+			);
+			name = "Business Layer";
+			sourceTree = "<group>";
+		};
+		597E50A12270E327001E374D /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				59408030226284A600E9513A /* PomodoroParameter.swift */,
+				5906A1A7226FA3F300CD61D0 /* PomodoroParameter+Implementation.swift */,
+			);
+			name = "Data Layer";
+			sourceTree = "<group>";
+		};
+		597E50A22270E3AF001E374D /* Factory Files */ = {
+			isa = PBXGroup;
+			children = (
+				59C6131A226AADB700B4D5EA /* Factory.swift */,
+				5906A1A4226F992200CD61D0 /* Factory+Implementation.swift */,
+			);
+			name = "Factory Files";
+			sourceTree = "<group>";
+		};
+		597E50A62272A235001E374D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				597E50A72272A268001E374D /* PomodoroView.swift */,
+				59347E5A22835D6A0077396E /* UnauthorizedUserNotificationView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		597E50A92272A618001E374D /* Helper Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				597E50AA2272A63D001E374D /* NSLayoutConstraint.swift */,
+				59550FBE2273DD8400F48DEC /* UIColor.swift */,
+				592A17732295F95100B7F675 /* String.swift */,
+			);
+			path = "Helper Extensions";
 			sourceTree = "<group>";
 		};
 		5988B68E225FAE5A0034F848 = {
@@ -142,9 +311,10 @@
 			isa = PBXGroup;
 			children = (
 				5988B69A225FAE5A0034F848 /* AppDelegate.swift */,
-				5936A3922266592000023586 /* Pomodoro */,
-				59AA4C45226677EB0006A24B /* Persistency */,
-				5940803822628AB400E9513A /* Constant.swift */,
+				597E509E2270E2D7001E374D /* Pomodoro */,
+				596DB6AD2298A41300E293FF /* Parameter */,
+				597E50A22270E3AF001E374D /* Factory Files */,
+				597E50A92272A618001E374D /* Helper Extensions */,
 				5936A3932266598100023586 /* Supporting Files */,
 			);
 			path = Todoro;
@@ -159,13 +329,23 @@
 			path = TodoroTests;
 			sourceTree = "<group>";
 		};
-		59AA4C45226677EB0006A24B /* Persistency */ = {
+		59B9A319228DBBC90053EF20 /* User Interface Layer */ = {
 			isa = PBXGroup;
 			children = (
-				59AA4C42226677B30006A24B /* DataController.swift */,
-				5988B6A1225FAE5A0034F848 /* Todoro.xcdatamodeld */,
+				597E50A62272A235001E374D /* Views */,
+				593A00D2226588C80028EAD4 /* PomodoroViewController.swift */,
+				595B49C6226D768900D84EE8 /* PomodoroViewController+Implementation.swift */,
 			);
-			path = Persistency;
+			name = "User Interface Layer";
+			sourceTree = "<group>";
+		};
+		59EF2AD022826DD300249944 /* UserNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				59EF2AD422826E9D00249944 /* NotificationManager.swift */,
+				5928DB7122886CC300E8EF9D /* NotificationManager+Implementation.swift */,
+			);
+			name = UserNotifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,8 +428,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				591C775B22A2F23600E6DBA8 /* Assets.xcassets in Resources */,
 				5988B6A8225FAE5B0034F848 /* LaunchScreen.storyboard in Resources */,
-				5988B6A5225FAE5B0034F848 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,18 +447,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59408031226284A600E9513A /* UserPreferenceImplementation.swift in Sources */,
-				5988B6A3225FAE5A0034F848 /* Todoro.xcdatamodeld in Sources */,
-				593A00D9226588C80028EAD4 /* Pomodoro.swift in Sources */,
+				595B49C7226D768900D84EE8 /* PomodoroViewController+Implementation.swift in Sources */,
+				59C6131B226AADB700B4D5EA /* Factory.swift in Sources */,
+				596DB6B42298A8CD00E293FF /* ParameterInputBoundary.swift in Sources */,
+				59408031226284A600E9513A /* PomodoroParameter.swift in Sources */,
+				59EF2AD222826E0F00249944 /* UserNotification.swift in Sources */,
+				596DB6C62298AB9300E293FF /* ParameterUseCase.swift in Sources */,
+				5906A1A8226FA3F300CD61D0 /* PomodoroParameter+Implementation.swift in Sources */,
+				5928DB7222886CC300E8EF9D /* NotificationManager+Implementation.swift in Sources */,
+				59EF2AD522826E9D00249944 /* NotificationManager.swift in Sources */,
+				596DB6BA2298AA6D00E293FF /* ParameterUserInterface.swift in Sources */,
+				593A00D9226588C80028EAD4 /* Timer.swift in Sources */,
 				59BDED842263819B00FFBB69 /* InputBoundary.swift in Sources */,
-				5936A38F2266514D00023586 /* Presenter.swift in Sources */,
-				5940803922628AB400E9513A /* Constant.swift in Sources */,
-				59AA4C43226677B30006A24B /* DataController.swift in Sources */,
+				59550FBF2273DD8400F48DEC /* UIColor.swift in Sources */,
+				5906A1A5226F992200CD61D0 /* Factory+Implementation.swift in Sources */,
+				5936A38F2266514D00023586 /* PomodoroPresenter.swift in Sources */,
+				597E50AB2272A63D001E374D /* NSLayoutConstraint.swift in Sources */,
+				592A176E22949AF300B7F675 /* ParameterViewController.swift in Sources */,
+				596DB6B72298AA3E00E293FF /* ParameterOutputBoundary.swift in Sources */,
+				59C61318226AAD2900B4D5EA /* PomodoroPresenter+Implementation.swift in Sources */,
+				592A17712295B80500B7F675 /* ParameterView.swift in Sources */,
+				592A17742295F95100B7F675 /* String.swift in Sources */,
 				59BDED8122636F3400FFBB69 /* OutputBoundary.swift in Sources */,
-				5984E1B022617646009C5CFC /* Interactor.swift in Sources */,
-				594080332262864800E9513A /* UserPreference.swift in Sources */,
+				5984E1B022617646009C5CFC /* PomodoroUseCase.swift in Sources */,
+				596DB6BD2298AA8E00E293FF /* ParameterViewController+Implementation.swift in Sources */,
+				59347E5B22835D6A0077396E /* UnauthorizedUserNotificationView.swift in Sources */,
+				594080332262864800E9513A /* Parameter.swift in Sources */,
+				597E50A82272A268001E374D /* PomodoroView.swift in Sources */,
+				596DB6C02298AB0F00E293FF /* ParameterPresenter.swift in Sources */,
+				59C61315226AA7CA00B4D5EA /* PomodoUseCase+Implementation.swift in Sources */,
 				5988B69B225FAE5A0034F848 /* AppDelegate.swift in Sources */,
-				593A00DA226588C80028EAD4 /* ViewController.swift in Sources */,
+				594F95E4226D6761002581D8 /* UserInterface.swift in Sources */,
+				593A00DA226588C80028EAD4 /* PomodoroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,18 +486,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				596DB6BE2298AA8E00E293FF /* ParameterViewController+Implementation.swift in Sources */,
+				592A176F22949AF300B7F675 /* ParameterViewController.swift in Sources */,
+				5906A1A6226F9DF000CD61D0 /* Factory+Implementation.swift in Sources */,
+				5906A1A9226FBE7500CD61D0 /* PomodoroParameter+Implementation.swift in Sources */,
+				596DB6C72298AB9300E293FF /* ParameterUseCase.swift in Sources */,
+				596BBF97226BA9DB006962DE /* PomodoroUseCaseTests.swift in Sources */,
+				596DB6C12298AB0F00E293FF /* ParameterPresenter.swift in Sources */,
+				59C6131C226AADB700B4D5EA /* Factory.swift in Sources */,
 				59BDED852263819B00FFBB69 /* InputBoundary.swift in Sources */,
-				59AA4C44226677BF0006A24B /* DataController.swift in Sources */,
+				59EF2AD622826E9D00249944 /* NotificationManager.swift in Sources */,
 				59BDED8222636F3400FFBB69 /* OutputBoundary.swift in Sources */,
-				5984E1B122617646009C5CFC /* Interactor.swift in Sources */,
-				594080342262864800E9513A /* UserPreference.swift in Sources */,
-				5936A3912266571A00023586 /* ViewController.swift in Sources */,
-				5940803C22628E9100E9513A /* InteractorTests.swift in Sources */,
-				593A00E022658B180028EAD4 /* Pomodoro.swift in Sources */,
-				5940803A22628AB400E9513A /* Constant.swift in Sources */,
-				593A153C2262C221009F9D66 /* UserPreferenceImplementation.swift in Sources */,
-				5936A3902266514D00023586 /* Presenter.swift in Sources */,
-				5988B6B3225FAE5B0034F848 /* PomodoroTests.swift in Sources */,
+				5984E1B122617646009C5CFC /* PomodoroUseCase.swift in Sources */,
+				594080342262864800E9513A /* Parameter.swift in Sources */,
+				592A17752295F95100B7F675 /* String.swift in Sources */,
+				59347E5C22835F2A0077396E /* UnauthorizedUserNotificationView.swift in Sources */,
+				596DB6B82298AA3E00E293FF /* ParameterOutputBoundary.swift in Sources */,
+				596DB6B52298A8CD00E293FF /* ParameterInputBoundary.swift in Sources */,
+				5936A3912266571A00023586 /* PomodoroViewController.swift in Sources */,
+				59C61319226AAD2900B4D5EA /* PomodoroPresenter+Implementation.swift in Sources */,
+				5940803C22628E9100E9513A /* PomodorUserPreferenceTests.swift in Sources */,
+				592A17722295B80500B7F675 /* ParameterView.swift in Sources */,
+				59550FC02273DDC800F48DEC /* UIColor.swift in Sources */,
+				59364CF5227E15CE003214B3 /* Timer.swift in Sources */,
+				593E205B2272B943006F7173 /* NSLayoutConstraint.swift in Sources */,
+				59EF2AD322826E0F00249944 /* UserNotification.swift in Sources */,
+				593A153C2262C221009F9D66 /* PomodoroParameter.swift in Sources */,
+				59C61316226AA7CA00B4D5EA /* PomodoUseCase+Implementation.swift in Sources */,
+				5928DB7322886CC300E8EF9D /* NotificationManager+Implementation.swift in Sources */,
+				593E205A2272B93E006F7173 /* PomodoroView.swift in Sources */,
+				5936A3902266514D00023586 /* PomodoroPresenter.swift in Sources */,
+				594F95E5226D6761002581D8 /* UserInterface.swift in Sources */,
+				596DB6BB2298AA6D00E293FF /* ParameterUserInterface.swift in Sources */,
+				5988B6B3225FAE5B0034F848 /* TimeKeeperTests.swift in Sources */,
+				595B49C8226D768900D84EE8 /* PomodoroViewController+Implementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +665,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VKJGV2D92P;
 				INFOPLIST_FILE = "$(SRCROOT)/Todoro/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -452,6 +675,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.spencerforrestios.Todoro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = TodoroDevelopment;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -461,7 +685,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VKJGV2D92P;
 				INFOPLIST_FILE = "$(SRCROOT)/Todoro/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,6 +695,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.spencerforrestios.Todoro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = TodoroDistribution;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -479,6 +705,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VKJGV2D92P;
 				INFOPLIST_FILE = TodoroTests/Info.plist;
@@ -489,6 +716,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.spencerforrestios.TodoroTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -498,6 +726,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VKJGV2D92P;
 				INFOPLIST_FILE = TodoroTests/Info.plist;
@@ -508,6 +737,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.spencerforrestios.TodoroTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -544,19 +774,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		5988B6A1225FAE5A0034F848 /* Todoro.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				5988B6A2225FAE5A0034F848 /* Todoro.xcdatamodel */,
-			);
-			currentVersion = 5988B6A2225FAE5A0034F848 /* Todoro.xcdatamodel */;
-			path = Todoro.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 5988B68F225FAE5A0034F848 /* Project object */;
 }

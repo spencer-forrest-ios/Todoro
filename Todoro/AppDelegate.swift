@@ -7,23 +7,32 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
-  var dataController = DataController(modelName: "Todoro")
+  var controller: PomodoroViewController!
   
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
-    Interactor.userPreferenceFactory = UserPreferenceFactoryImplementation()
-    Interactor.outputBoundaryFactory = OutputBoundaryFactoryImplementation()
-    ViewController.inputBoundaryFactory = InputBoundaryFactoryImplementation()
+    
+    controller = PomodoroViewController()
+    
+    Factory.pomodoroUserInterface = controller
+    Factory.pomodoroUserPreference = UserPreferenceFactoryImplementation()
+    Factory.pomodoroUserNotification = UserNotificationFactoryImplementation()
+    Factory.pomodoroInputBoundary = InputBoundaryFactoryImplementation()
+    Factory.pomodoroOutputBoundary = OutputBoundaryFactoryImplementation()
+    
+    let navigationController = UINavigationController(rootViewController: controller)
     
     window = UIWindow(frame: UIScreen.main.bounds)
-    window?.rootViewController = ViewController()
+    window?.rootViewController = navigationController
     window?.makeKeyAndVisible()
+    
+    UNUserNotificationCenter.current().delegate = controller
     
     return true
   }
@@ -40,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func applicationWillEnterForeground(_ application: UIApplication) {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    controller.applicationWillEnterForeground()
   }
   
   func applicationDidBecomeActive(_ application: UIApplication) {
@@ -49,8 +59,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationWillTerminate(_ application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
-    dataController.saveContext()
   }
-  
 }
-

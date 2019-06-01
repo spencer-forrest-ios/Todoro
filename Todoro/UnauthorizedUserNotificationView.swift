@@ -1,5 +1,5 @@
 //
-//  UserNotificationPermissionView.swift
+//  UnauthorizedUserNotificationView.swift
 //  Todoro
 //
 //  Created by Spencer Forrest on 08/05/2019.
@@ -8,23 +8,23 @@
 
 import UIKit
 
-class UserNotificationPermissionView: UIView {
+class UnauthorizedUserNotificationView: UIView {
+  // TODO: change or add new labels
   
   let warningLabel: UILabel = {
     let label = UILabel()
     label.numberOfLines = 0
-    label.font = UIFont.systemFont(ofSize: 30)
-    label.textAlignment = .center
+    label.textAlignment = NSTextAlignment.justified
     label.baselineAdjustment = .alignCenters
-    label.textColor = UIColor.white
+    label.textColor = UIColor.black
     return label
   }()
   
   let settingButton: UIButton = {
     let button = UIButton()
-    button.backgroundColor = UIColor.white
-    button.setTitleColor(UIColor.red, for: .normal)
-    button.setTitle(Constant.String.settingButtonTitle, for: .normal)
+    button.backgroundColor = UIColor.black
+    button.setTitleColor(UIColor.white, for: .normal)
+    button.setTitle("Go to Settings", for: .normal)
     button.layer.cornerRadius = 10
     button.clipsToBounds = true
     return button
@@ -44,7 +44,7 @@ class UserNotificationPermissionView: UIView {
   
   init() {
     super.init(frame: .zero)
-    backgroundColor = UIColor.red
+    backgroundColor = UIColor.createFromRGB(200, 200, 200)
     stackView.addArrangedSubview(warningLabel)
     stackView.addArrangedSubview(settingButton)
     addSubview(stackView)

@@ -6,4 +6,10 @@
 //  Copyright © 2019 Spencer Forrest. All rights reserved.
 //
 
-import Foundation
+protocol ParameterOutputBoundary {
+  func setParameters(pomodoroDuration: Double,
+                     shortRestDuration: Double,
+                     longRestDuration: Double,
+                     maxPomodori: Int)
+  func noticeParametersChanged()
+}

@@ -19,6 +19,10 @@ class Timer {
   private(set) var count: Int = 0
   private(set) var type: Kind = .rest
   
+  var isOver: Bool {
+    return finish == nil || finish! <= Date().timeIntervalSinceReferenceDate
+  }
+  
   convenience init(finish: Double?,
        isRunning: Bool,
        count: Int,
@@ -28,7 +32,7 @@ class Timer {
     self.finish = finish
     self.isRunning = isRunning
     self.count = count
-    self.type = Kind(rawValue: type) ?? Kind.pomodoro
+    self.type = Kind(rawValue: type) ?? Kind.rest
   }
   
   func start(_ duration: Double) {
@@ -52,7 +56,6 @@ class Timer {
   
   func reset() {
     finish = nil
-    
     if type == .pomodoro {
       type = .rest
       count -= 1

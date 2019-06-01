@@ -7,5 +7,15 @@
 //
 
 protocol InputBoundary: AnyObject {
-  func start()
+  func applicationWillEnterForeground()
+  
+  func setNextTimer()
+  func nextTimerButtonTapped()
+  func startButtonTapped()
+  func resetButtonTapped()
+  func skipButtonTapped()
+  func stopButtonTapped()
+  
+  func agreedToSkipRest()
+  func agreedToStop()
 }

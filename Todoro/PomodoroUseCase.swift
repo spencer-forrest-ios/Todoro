@@ -8,52 +8,47 @@
 
 import Foundation
 
-class PomodoroUseCase: NSObject {
+class PomodoroUseCase {
   
   var outputBoundary: OutputBoundary
-  var userPreference: UserPreference
+  var parameter: Parameter
+  var userNotification: UserNotification
+  var timer: Timer
   
-  var pomodoroLeft = 1
-  var pomodoroCount = 1
-  
-  var pomodoro: Pomodoro
-  var workDuration: TimeInterval
-  var shortRestDuration: TimeInterval
-  var longRestDuration: TimeInterval
-  
-  var timer: Timer!
-  
-  override init() {
-    userPreference = Factory.pomodoroUserPreference.make()
+  init() {
+    parameter = Factory.pomodoroUserPreference.make()
     outputBoundary = Factory.pomodoroOutputBoundary.make()
+    userNotification = Factory.pomodoroUserNotification.make()
     
-    workDuration = userPreference.workDuration
-    longRestDuration = userPreference.longRestDuration
-    shortRestDuration = userPreference.shortRestDuration
-    
-    pomodoro = Pomodoro(10, restDuration: shortRestDuration)
+    timer = Timer()
+    parameter.setDefaultValue(pomodoroDuration: 25 * 60,
+                              shortRestDuration: 5 * 60,
+                              longRestDuration: 30 * 60,
+                              maxPomodori: 5)
   }
   
-  @objc func sendNewTimeInterval(_ timer: Timer) {
-    guard let startDate = pomodoro.startDate,
-      let finishDate = pomodoro.finishDate
-      else {
-        timer.invalidate()
-        return
+  func checkOnTimerStatus() {
+    timer = parameter.loadTimer()
+    
+    if timer.isOver {
+      setNextTimer()
     }
-    
-    let finishTimeInterval = finishDate.timeIntervalSinceReferenceDate.rounded(.towardZero)
-    let startTimeInterval = startDate.timeIntervalSinceReferenceDate.rounded(.towardZero)
-    let nowTimeInterval = Date().timeIntervalSinceReferenceDate.rounded(.towardZero)
-    
-    
-    let timeElapsed = nowTimeInterval - startTimeInterval
-    outputBoundary.handleNewTimeInterval(timeElapsed)
-    
-    if finishTimeInterval <= nowTimeInterval {
-      pomodoro.stop()
-      timer.invalidate()
+    else if timer.isRunning {
+      setCurrentTimer()
     }
   }
   
+  func getRestDuration(_ count: Int) -> Double {
+    let isFourthPomodoro = count > 0 && count % 4 == 0
+    return isFourthPomodoro ? parameter.longRestDuration : parameter.shortRestDuration
+  }
+  
+  private func setCurrentTimer() {
+    switch timer.type {
+    case .pomodoro:
+      outputBoundary.setCurrentPomodoroLayout(count: timer.count)
+    case .rest:
+      outputBoundary.setCurrentRestLayout(count: timer.count)
+    }
+  }
 }

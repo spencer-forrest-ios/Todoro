@@ -1,14 +1,21 @@
 //
-//  UserPreference.swift
+//  Parameter.swift
 //  Todoro
 //
 //  Created by Spencer Forrest on 13/04/2019.
 //  Copyright © 2019 Spencer Forrest. All rights reserved.
 //
 
-protocol UserPreference {
-  var isIdleTimerDisable: Bool { get set }
+protocol Parameter {
+  func setDefaultValue(pomodoroDuration: Double,
+                        shortRestDuration: Double,
+                        longRestDuration: Double,
+                        maxPomodori: Int)
   
+  func save(_ : Timer)
+  func loadTimer() -> Timer
+  
+  var maxPomodori: Int { get set }
   var pomodoroDuration: Double { get set }
   var shortRestDuration: Double { get set }
   var longRestDuration: Double { get set }

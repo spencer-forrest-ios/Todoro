@@ -11,11 +11,9 @@ import XCTest
 
 class PomodoroUserPreferenceTests: XCTestCase {
   
-  var userPreferenceFactory: UserPreferenceFactory!
-  var userPreference: UserPreference!
+  var userPreference: PomodoroParameter!
   
   var userDefaultsKeys = [
-    Constant.Key.isIdleTimerDisabled,
     Constant.Key.longRestDuration,
     Constant.Key.shortRestDuration,
     Constant.Key.workDuration
@@ -23,8 +21,7 @@ class PomodoroUserPreferenceTests: XCTestCase {
   
   override func setUp() {
     super.setUp()
-    userPreferenceFactory = UserPreferenceFactoryImplementation()
-    userPreference = userPreferenceFactory.make()
+    userPreference = PomodoroParameter()
   }
   
   override func tearDown() {
@@ -34,32 +31,15 @@ class PomodoroUserPreferenceTests: XCTestCase {
     }
   }
   
-  // MARK: "is idle time disabled"
-  func testIsIdleTimeDisabledByDefault_True() {
-    XCTAssert(userPreference.isIdleTimerDisable)
-  }
-  
-  func testSetIsIdleTimeDisabledToTrue_UserDefaultsTrue() {
-    userPreference.isIdleTimerDisable = true
-    XCTAssert(userPreference.isIdleTimerDisable)
-    XCTAssert(UserDefaults.standard.bool(forKey: Constant.Key.isIdleTimerDisabled))
-  }
-  
-  func testSetIsIdleTimeDisabledToFalse_UserDefaultsFalse() {
-    userPreference.isIdleTimerDisable = false
-    XCTAssertFalse(userPreference.isIdleTimerDisable)
-    XCTAssertFalse(UserDefaults.standard.bool(forKey: Constant.Key.isIdleTimerDisabled))
-  }
-  
   // MARK: "work duration"
   func testWorkDurationDefaultValue_ConstantWorkDuration() {
-    XCTAssert(userPreference.workDuration == Constant.defaultValue.workDuration)
+    XCTAssert(userPreference.pomodoroDuration == Constant.defaultValue.pomodoroDuration)
   }
   
   func testSetNewValueForWorkDuration_UserDefaultsEqualNewValue() {
     let newValue: Double = 10
-    userPreference.workDuration = newValue
-    XCTAssert(userPreference.workDuration == newValue)
+    userPreference.pomodoroDuration = newValue
+    XCTAssert(userPreference.pomodoroDuration == newValue)
     XCTAssert(UserDefaults.standard.double(forKey: Constant.Key.workDuration) == newValue)
   }
   

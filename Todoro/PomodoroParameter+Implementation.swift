@@ -8,59 +8,87 @@
 
 import Foundation
 
-extension PomodoroUserParameters: UserPreference {
+extension PomodoroParameter: Parameter {
   
-  var isIdleTimerDisable: Bool {
+  func setDefaultValue(pomodoroDuration: Double,
+                        shortRestDuration: Double,
+                        longRestDuration: Double,
+                        maxPomodori: Int) {
+    
+    DefaultValue.pomodoroDuration = pomodoroDuration
+    DefaultValue.shortRestDuration = shortRestDuration
+    DefaultValue.longRestDuration = longRestDuration
+    DefaultValue.maxPomodori = maxPomodori
+  }
+  
+  func save(_ timeKeeper: Timer) {
+    UserDefaults.standard.set(timeKeeper.finish, forKey: Key.finishTimeInterval)
+    UserDefaults.standard.set(timeKeeper.isRunning, forKey: Key.isRunning)
+    UserDefaults.standard.set(timeKeeper.count, forKey: Key.timerCount)
+    UserDefaults.standard.set(timeKeeper.type.rawValue, forKey: Key.timerType)
+  }
+  
+  func loadTimer() -> Timer {
+    let finish = UserDefaults.standard.value(forKey: Key.finishTimeInterval) as? Double
+    let isRunning = UserDefaults.standard.value(forKey: Key.isRunning) as? Bool ?? DefaultValue.isRunning
+    let count = UserDefaults.standard.value(forKey: Key.timerCount) as? Int ?? DefaultValue.timerCount
+    let type = UserDefaults.standard.value(forKey: Key.timerType) as? String ?? DefaultValue.timerType
+    
+    return Timer(finish: finish,
+                 isRunning: isRunning,
+                 count: count,
+                 type: type)
+  }
+  
+  var maxPomodori: Int {
     get {
-      let key = Constant.Key.isIdleTimerDisabled
-      let defaultValue = Constant.defaultValue.isIdleTimerDisabled
-      let isDisabled = UserDefaults.standard.value(forKey: key) as? Bool
-      return isDisabled ?? defaultValue
+      let key = Key.maxPomodori
+      let defaultValue = DefaultValue.maxPomodori!
+      return UserDefaults.standard.value(forKey: key) as? Int ?? defaultValue
     }
     
     set {
-      let key = Constant.Key.isIdleTimerDisabled
+      let key = Key.maxPomodori
       UserDefaults.standard.set(newValue, forKey: key)
     }
   }
   
   var pomodoroDuration: Double {
     get {
-      let key = Constant.Key.workDuration
-      let defaultValue = Constant.defaultValue.pomodoroDuration
+      let key = Key.pomodoroDuration
+      let defaultValue = DefaultValue.pomodoroDuration!
       return getDuration(key, defaultValue)
     }
     
     set {
-      let key = Constant.Key.workDuration
+      let key = Key.pomodoroDuration
       setDuration(key, newValue)
     }
   }
   
   var shortRestDuration: Double {
     get {
-      let key = Constant.Key.shortRestDuration
-      let defaultValue = Constant.defaultValue.shortRestDuration
+      let key = Key.shortRestDuration
+      let defaultValue = DefaultValue.shortRestDuration!
       return getDuration(key, defaultValue)
     }
     
     set {
-      let key = Constant.Key.shortRestDuration
+      let key = Key.shortRestDuration
       setDuration(key, newValue)
     }
   }
   
   var longRestDuration: Double {
     get {
-      let key = Constant.Key.longRestDuration
-      let defaultValue = Constant.defaultValue.longRestDuration
+      let key = Key.longRestDuration
+      let defaultValue = DefaultValue.longRestDuration!
       return getDuration(key, defaultValue)
     }
     
     set {
-      let key = Constant.Key.longRestDuration
+      let key = Key.longRestDuration
       setDuration(key, newValue)
     }
   }
 }
-

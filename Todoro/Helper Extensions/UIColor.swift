@@ -15,7 +15,6 @@ extension UIColor {
   static let elm = UIColor.createFromRGB(26, 147, 111)
   static let eden = UIColor.createFromRGB(17, 75, 95)
   static let olsoGray = UIColor.createFromRGB(149, 152, 154)
-  static let transparent = UIColor.white.withAlphaComponent(0.85)
   
   
   /// Facilitate the use of RGB

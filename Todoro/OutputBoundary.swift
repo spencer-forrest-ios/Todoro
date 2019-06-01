@@ -7,5 +7,16 @@
 //
 
 protocol OutputBoundary {
-  func handleNewTimeInterval(_: Double)
+  func setUnauthorizedLayout()
+  func setAuthorizedLayout()
+  
+  func setCurrentPomodoroLayout(count: Int)
+  func setCurrentRestLayout(count: Int)
+  func setNextRestLayout(count: Int)
+  func setNextPomodoroLayout(count: Int)
+  func setStartingLayout()
+  func setEndLayout()
+  
+  func askUserToSkipRest()
+  func askUserToStop()
 }

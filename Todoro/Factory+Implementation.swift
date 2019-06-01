@@ -25,7 +25,31 @@ class OutputBoundaryFactoryImplementation: OutputBoundaryFactory {
 }
 
 class UserPreferenceFactoryImplementation: UserPreferenceFactory {
-  func make() -> UserPreference {
-    return PomodoroUserPreference()
+  func make() -> Parameter {
+    return PomodoroParameter()
+  }
+}
+
+class UserNotificationFactoryImplementation: UserNotificationFactory {
+  func make() -> UserNotification {
+    return UserNotificationManager()
+  }
+}
+
+extension ParameterViewController: ParameterUserInterfaceFactory {  
+  func make() -> ParameterUserInterface {
+    return self
+  }
+}
+
+class ParameterInputBoundaryFactoryImplementation: ParameterInputBoundaryFactory {
+  func make() -> ParameterInputBoundary {
+    return ParameterUseCase()
+  }
+}
+
+class ParameterOutputBoundaryFactoryImplementation: ParameterOutputBoundaryFactory {
+  func make() -> ParameterOutputBoundary {
+    return ParameterPresenter()
   }
 }

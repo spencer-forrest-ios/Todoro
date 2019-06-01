@@ -6,4 +6,10 @@
 //  Copyright © 2019 Spencer Forrest. All rights reserved.
 //
 
-import Foundation
+protocol ParameterInputBoundary {
+  func saveButtonTapped(pomodoro: String?,
+                        shortRest: String?,
+                        longRest: String?,
+                        maxPomodori: String?)
+  func loadParameters()
+}
