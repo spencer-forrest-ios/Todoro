@@ -9,7 +9,7 @@
 protocol UserPreference {
   var isIdleTimerDisable: Bool { get set }
   
-  var workDuration: Double { get set }
+  var pomodoroDuration: Double { get set }
   var shortRestDuration: Double { get set }
   var longRestDuration: Double { get set }
 }

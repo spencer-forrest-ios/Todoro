@@ -1,20 +1,15 @@
 //
-//  UserPreferenceImplementation.swift
+//  PomodoroParameter+Implementation.swift
 //  Todoro
 //
-//  Created by Spencer Forrest on 13/04/2019.
+//  Created by Spencer Forrest on 23/04/2019.
 //  Copyright © 2019 Spencer Forrest. All rights reserved.
 //
 
 import Foundation
 
-class UserPreferenceFactoryImplementation: UserPreferenceFactory {
-  func make() -> UserPreference {
-    return UserPreferenceImplementation()
-  }
-}
-
-class UserPreferenceImplementation: UserPreference {
+extension PomodoroUserParameters: UserPreference {
+  
   var isIdleTimerDisable: Bool {
     get {
       let key = Constant.Key.isIdleTimerDisabled
@@ -29,15 +24,15 @@ class UserPreferenceImplementation: UserPreference {
     }
   }
   
-  var workDuration: Double {
+  var pomodoroDuration: Double {
     get {
-      let key = Constant.Key.workDurations
-      let defaultValue = Constant.defaultValue.workDurations
+      let key = Constant.Key.workDuration
+      let defaultValue = Constant.defaultValue.pomodoroDuration
       return getDuration(key, defaultValue)
     }
     
     set {
-      let key = Constant.Key.workDurations
+      let key = Constant.Key.workDuration
       setDuration(key, newValue)
     }
   }
@@ -67,12 +62,5 @@ class UserPreferenceImplementation: UserPreference {
       setDuration(key, newValue)
     }
   }
-  
-  private func setDuration(_ key: String, _ value: Double) {
-    UserDefaults.standard.set(value, forKey: key)
-  }
-  
-  private func getDuration(_ key: String, _ defaultValue: Double) -> Double {
-    return UserDefaults.standard.value(forKey: key) as? Double ?? defaultValue
-  }
 }
+

@@ -6,8 +6,6 @@
 //  Copyright © 2019 Spencer Forrest. All rights reserved.
 //
 
-import Foundation
-
 protocol OutputBoundary {
-  func processDate(_ : Date)
+  func handleNewTimeInterval(_: Double)
 }

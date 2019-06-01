@@ -6,8 +6,6 @@
 //  Copyright © 2019 Spencer Forrest. All rights reserved.
 //
 
-import Foundation
-
-protocol InputBoundary {
-  
+protocol InputBoundary: AnyObject {
+  func start()
 }
