@@ -33,7 +33,7 @@ class ParameterUseCase: ParameterInputBoundary {
     }
     
     if let longRest = longRest, !longRest.isEmpty {
-      let minimum: Double = 120
+      let minimum: Double = 15 * 60
       let duration = (Double(longRest) ?? 30) * 60
       parameter.longRestDuration = duration < minimum ? minimum : duration
     }
