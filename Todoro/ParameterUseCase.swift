@@ -21,13 +21,13 @@ class ParameterUseCase: ParameterInputBoundary {
                         maxPomodori: String?) {
     
     if let pomodoro = pomodoro, !pomodoro.isEmpty {
-      let minimum: Double = 60 //5 * 60
+      let minimum: Double = 5 * 60
       let duration = (Double(pomodoro) ?? 25) * 60
       parameter.pomodoroDuration = duration < minimum ? minimum : duration
     }
     
     if let shortRest = shortRest, !shortRest.isEmpty {
-      let minimum: Double = 60 //3 * 60
+      let minimum: Double = 3 * 60
       let duration = (Double(shortRest) ?? 5) * 60
       parameter.shortRestDuration = duration < minimum ? minimum : duration
     }
