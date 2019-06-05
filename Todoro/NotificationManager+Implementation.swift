@@ -15,55 +15,74 @@ extension UserNotificationManager: UserNotification {
       (settings) in
       
       let isAuthorized = settings.authorizationStatus == .authorized
-        && settings.alertSetting == .enabled
-        && settings.soundSetting == .enabled
+        && (settings.alertSetting == .enabled
+          || settings.soundSetting == .enabled)
       
       handler(isAuthorized)
     }
   }
   
   func setForPomodoro(_ duration: Double, count: Int) {
-    let content = UNMutableNotificationContent()
-    content.title = "Pomodoro \(count) over"
-    content.sound = UNNotificationSound.default
-    
-    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: duration, repeats: false)
-    
-    let uuidString = UUID().uuidString
-    
-    let request = UNNotificationRequest(identifier: uuidString,
-                                        content: content,
-                                        trigger: trigger)
-    
-    // Schedule the request with the system.
-    notificationCenter.add(request) {
-      (error) in
-      if let error = error {
-        print(error.localizedDescription)
+    self.notificationCenter.getNotificationSettings {
+      (settings) in
+      
+      if settings.authorizationStatus == .authorized {
+        let content = UNMutableNotificationContent()
+        
+        if settings.soundSetting == .enabled {
+          content.sound = UNNotificationSound.default
+        }
+        
+        if settings.alertSetting == .enabled {
+          content.title = "Pomodoro \(count) over"
+        }
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: duration, repeats: false)
+        let uuidString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuidString,
+                                            content: content,
+                                            trigger: trigger)
+        // Schedule the request with the system.
+        self.notificationCenter.add(request) {
+          (error) in
+          if let error = error {
+            print(error.localizedDescription)
+          }
+        }
       }
+      
     }
   }
   
   func setForRest(_ duration: Double, count: Int) {
-    let content = UNMutableNotificationContent()
-    content.title = "Rest \(count) over"
-    content.body = "Rest \(count) just finished"
-    content.sound = UNNotificationSound.default
-    
-    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: duration, repeats: false)
-    
-    let uuidString = UUID().uuidString
-    
-    let request = UNNotificationRequest(identifier: uuidString,
-                                        content: content,
-                                        trigger: trigger)
-    
-    // Schedule the request with the system.
-    notificationCenter.add(request) {
-      (error) in
-      if let error = error {
-        print(error.localizedDescription)
+    self.notificationCenter.getNotificationSettings {
+      (settings) in
+      
+      if settings.authorizationStatus == .authorized {
+        let content = UNMutableNotificationContent()
+        
+        if settings.soundSetting == .enabled {
+          content.sound = UNNotificationSound.default
+        }
+        
+        if settings.alertSetting == .enabled {
+          content.title = "Rest \(count) over"
+        }
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: duration, repeats: false)
+        let uuidString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuidString,
+                                            content: content,
+                                            trigger: trigger)
+        // Schedule the request with the system.
+        self.notificationCenter.add(request) {
+          (error) in
+          if let error = error {
+            print(error.localizedDescription)
+          }
+        }
       }
+      
     }
   }
   

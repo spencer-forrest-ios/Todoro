@@ -11,36 +11,49 @@ import Foundation
 extension PomodoroUseCase: InputBoundary {
   
   func applicationWillEnterForeground() {
+    self.checkOnTimerStatus()
     
     userNotification.checkPermission {
       (isAuthorized) in
       
       DispatchQueue.main.async {
+        self.checkOnTimerStatus()
+        
         if isAuthorized {
-          self.outputBoundary.setAuthorizedLayout()
-          self.checkOnTimerStatus()
+          self.parameter.isNotificationsOptional = false
+        }
+        
+        if isAuthorized || self.parameter.isNotificationsOptional {
+          self.outputBoundary.removeOptionalNotificationLayout(isAnimated: false)
         } else {
-          self.outputBoundary.setUnauthorizedLayout()
-          self.timer.stop()
-          self.parameter.save(self.timer)
+           self.outputBoundary.addOptionalNotificationLayout()
         }
       }
       
     }
   }
+  
+  func applicationDidEnterBackground() {
+    endTimer()
+  }
+  
+  func ignoreNotificationsButtonTapped() {
+    parameter.isNotificationsOptional = true
+    outputBoundary.removeOptionalNotificationLayout(isAnimated: true)
+  }
+  
+  @objc func setNextTimer() {
+    guard timeKeeper.isRunning else { return }
     
-  func setNextTimer() {
-    guard timer.isRunning else { return }
+    endTimer()
     
-    userNotification.cancelAll()
-    
-    let isPomodoro = timer.type == .pomodoro
-    let timerCount = timer.count
+    let isPomodoro = timeKeeper.type == .pomodoro
+    let timerCount = timeKeeper.count
     let maxCountReached = timerCount == parameter.maxPomodori
     
     if isPomodoro && maxCountReached {
-      timer.stop()
-      parameter.save(timer)
+      timeKeeper.stop()
+      parameter.save(timeKeeper)
       
       DispatchQueue.main.async {
         self.outputBoundary.setEndLayout()
@@ -61,10 +74,15 @@ extension PomodoroUseCase: InputBoundary {
     outputBoundary.setCurrentPomodoroLayout(count: 1)
     
     let duration = parameter.pomodoroDuration
-    timer.start(duration)
-    parameter.save(timer)
+    timeKeeper.start(duration)
+    parameter.save(timeKeeper)
+    timer = Timer.scheduledTimer(timeInterval: duration,
+                                 target: self,
+                                 selector: #selector(setNextTimer),
+                                 userInfo: nil,
+                                 repeats: false)
     
-    userNotification.setForPomodoro(duration, count: timer.count)
+    userNotification.setForPomodoro(duration, count: timeKeeper.count)
   }
   
   func stopButtonTapped() {
@@ -76,12 +94,13 @@ extension PomodoroUseCase: InputBoundary {
   }
   
   func resetButtonTapped() {
-    guard timer.isRunning else { return }
+    guard timeKeeper.isRunning else { return }
     
     userNotification.cancelAll()
+    endTimer()
     
-    let isPomodoro = timer.type == .pomodoro
-    let timerCount = timer.count
+    let isPomodoro = timeKeeper.type == .pomodoro
+    let timerCount = timeKeeper.count
     
     if isPomodoro {
       outputBoundary.setNextPomodoroLayout(count: timerCount)
@@ -89,41 +108,48 @@ extension PomodoroUseCase: InputBoundary {
       outputBoundary.setNextRestLayout(count: timerCount)
     }
     
-    timer.reset()
-    parameter.save(timer)
+    timeKeeper.reset()
+    parameter.save(timeKeeper)
   }
   
   func agreedToSkipRest() {
-    timer.skipRest()
+    timeKeeper.skipRest()
     nextTimerButtonTapped()
   }
   
   func agreedToStop() {
     outputBoundary.setStartingLayout()
     userNotification.cancelAll()
-    timer.stop()
-    parameter.save(timer)
+    endTimer()
+    timeKeeper.stop()
+    parameter.save(timeKeeper)
   }
   
   func nextTimerButtonTapped() {
-    let isPomodoro = timer.type == .pomodoro
-    let timerCount = timer.count
+    let isPomodoro = timeKeeper.type == .pomodoro
+    let timerCount = timeKeeper.count
+    var duration: Double = 0
     
     if isPomodoro {
-      let duration = getRestDuration(timerCount)
-      timer.start(duration)
-      userNotification.setForRest(duration, count: timer.count)
+      duration = getRestDuration(timerCount)
+      timeKeeper.start(duration)
+      userNotification.setForRest(duration, count: timeKeeper.count)
       
       self.outputBoundary.setCurrentRestLayout(count: timerCount)
     }
     else {
-      let duration = parameter.pomodoroDuration
-      timer.start(duration)
-      userNotification.setForPomodoro(duration, count: timer.count)
+      duration = parameter.pomodoroDuration
+      timeKeeper.start(duration)
+      userNotification.setForPomodoro(duration, count: timeKeeper.count)
       
       self.outputBoundary.setCurrentPomodoroLayout(count: timerCount + 1)
     }
     
-    parameter.save(timer)
+    timer = Timer.scheduledTimer(timeInterval: duration,
+                                 target: self,
+                                 selector: #selector(setNextTimer),
+                                 userInfo: nil,
+                                 repeats: false)
+    parameter.save(timeKeeper)
   }
 }

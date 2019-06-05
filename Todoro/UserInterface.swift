@@ -7,11 +7,12 @@
 //
 
 protocol UserInterface: AnyObject {
-  func addUnauthorizedView(requirementsTitle: String,
+  func addOptionalNotificationView(requirementsTitle: String,
                            requirementsText: String,
                            instructionsTitle: String,
                            instructionsText: String)
-  func removeUnauthorizedView()
+  
+  func removeOptionalNotificationView(isAnimated: Bool)
     
   func setLayout(_: ViewModel)
   

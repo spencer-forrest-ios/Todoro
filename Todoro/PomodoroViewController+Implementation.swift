@@ -12,42 +12,27 @@ import UserNotifications
 // MARK: UserInterface
 extension PomodoroViewController: UserInterface {
   
-  func addUnauthorizedView(requirementsTitle: String,
-                           requirementsText: String,
-                           instructionsTitle: String,
-                           instructionsText: String) {
+  func addOptionalNotificationView(requirementsTitle: String,
+                                   requirementsText: String,
+                                   instructionsTitle: String,
+                                   instructionsText: String) {
+    guard optionalNotificationViewController == nil else { return }
     
-    guard unauthorizedUserNotificationView == nil else { return }
+    self.optionalNotificationViewController = OptionalNotificationViewController()
+    self.optionalNotificationViewController.inputBoundary = self.inputBoundary
     
-    navigationController?.isNavigationBarHidden = true
+    self.optionalNotificationViewController.requirementsTitle = requirementsTitle
+    self.optionalNotificationViewController.requirementsText = requirementsText
+    self.optionalNotificationViewController.instructionsTitle = instructionsTitle
+    self.optionalNotificationViewController.instructionsText = instructionsText
     
-    let warningText = NSMutableAttributedString()
-    warningText.append(formatAsTitle(requirementsTitle))
-    warningText.append(format(requirementsText))
-    warningText.append(formatAsTitle(instructionsTitle))
-    warningText.append(format(instructionsText))
-    
-    unauthorizedUserNotificationView = UnauthorizedUserNotificationView()
-    unauthorizedUserNotificationView.settingButton.addTarget(self,
-                                                             action: #selector(openSettings),
-                                                             for: .touchUpInside)
-    unauthorizedUserNotificationView.warningLabel.attributedText = warningText
-    
-    view.backgroundColor = UIColor.createFromRGB(200, 200, 200)
-    view.addSubview(unauthorizedUserNotificationView)
-    setUserNotificationPermissionViewContraints()
+    self.present(self.optionalNotificationViewController, animated: false)
   }
   
-  func removeUnauthorizedView() {
-    guard let _ = unauthorizedUserNotificationView else { return }
-    
-    navigationController?.isNavigationBarHidden = false
-    
-    unauthorizedUserNotificationView.settingButton.removeTarget(self, action: #selector(openSettings), for: .touchUpInside)
-    unauthorizedUserNotificationView.removeFromSuperview()
-    unauthorizedUserNotificationView = nil
-    
-    view.backgroundColor = UIColor.white
+  func removeOptionalNotificationView(isAnimated: Bool) {
+    guard optionalNotificationViewController != nil else { return }
+    self.optionalNotificationViewController.dismiss(animated: isAnimated)
+    self.optionalNotificationViewController = nil
   }
   
   func setLayout(_ viewModel: ViewModel) {
@@ -105,7 +90,7 @@ extension PomodoroViewController: UserInterface {
   func alertSkippingRest(_ title: String,
                          message: String,
                          positive: String,
-                        negative: String) {
+                         negative: String) {
     
     presentAlert(title,
                  message: message,
@@ -141,23 +126,6 @@ extension PomodoroViewController: UserInterface {
     alert.addAction(agreeAction)
     alert.addAction(cancelAction)
     present(alert, animated: true, completion: nil)
-  }
-  
-  private func formatAsTitle(_ string: String) -> NSAttributedString {
-    let attributes: [NSAttributedString.Key : Any] = [
-      NSAttributedString.Key.font: UIFont.systemFont(ofSize: 30),
-      NSAttributedString.Key.underlineStyle: NSUnderlineStyle.thick.rawValue
-    ]
-    
-    return NSAttributedString(string: string, attributes: attributes)
-  }
-  
-  private func format(_ string: String) -> NSAttributedString {
-    let attributes: [NSAttributedString.Key : Any] = [
-      NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)
-    ]
-    
-    return NSAttributedString(string: string, attributes: attributes)
   }
 }
 

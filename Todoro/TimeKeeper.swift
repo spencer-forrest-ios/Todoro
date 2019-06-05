@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Timer {
+class TimeKeeper {
   
   enum Kind: String {
     case pomodoro, rest

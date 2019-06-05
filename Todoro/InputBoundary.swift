@@ -8,6 +8,9 @@
 
 protocol InputBoundary: AnyObject {
   func applicationWillEnterForeground()
+  func applicationDidEnterBackground()
+  
+  func ignoreNotificationsButtonTapped()
   
   func setNextTimer()
   func nextTimerButtonTapped()

@@ -20,13 +20,13 @@
 		592A17722295B80500B7F675 /* ParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A17702295B80500B7F675 /* ParameterView.swift */; };
 		592A17742295F95100B7F675 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A17732295F95100B7F675 /* String.swift */; };
 		592A17752295F95100B7F675 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592A17732295F95100B7F675 /* String.swift */; };
-		59347E5B22835D6A0077396E /* UnauthorizedUserNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59347E5A22835D6A0077396E /* UnauthorizedUserNotificationView.swift */; };
-		59347E5C22835F2A0077396E /* UnauthorizedUserNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59347E5A22835D6A0077396E /* UnauthorizedUserNotificationView.swift */; };
-		59364CF5227E15CE003214B3 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D1226588C80028EAD4 /* Timer.swift */; };
+		59347E5B22835D6A0077396E /* OptionalNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59347E5A22835D6A0077396E /* OptionalNotificationView.swift */; };
+		59347E5C22835F2A0077396E /* OptionalNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59347E5A22835D6A0077396E /* OptionalNotificationView.swift */; };
+		59364CF5227E15CE003214B3 /* TimeKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D1226588C80028EAD4 /* TimeKeeper.swift */; };
 		5936A38F2266514D00023586 /* PomodoroPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5936A38B2266507A00023586 /* PomodoroPresenter.swift */; };
 		5936A3902266514D00023586 /* PomodoroPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5936A38B2266507A00023586 /* PomodoroPresenter.swift */; };
 		5936A3912266571A00023586 /* PomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D2226588C80028EAD4 /* PomodoroViewController.swift */; };
-		593A00D9226588C80028EAD4 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D1226588C80028EAD4 /* Timer.swift */; };
+		593A00D9226588C80028EAD4 /* TimeKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D1226588C80028EAD4 /* TimeKeeper.swift */; };
 		593A00DA226588C80028EAD4 /* PomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A00D2226588C80028EAD4 /* PomodoroViewController.swift */; };
 		593A153C2262C221009F9D66 /* PomodoroParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59408030226284A600E9513A /* PomodoroParameter.swift */; };
 		593E205A2272B93E006F7173 /* PomodoroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597E50A72272A268001E374D /* PomodoroView.swift */; };
@@ -75,6 +75,8 @@
 		59EF2AD322826E0F00249944 /* UserNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF2AD122826E0F00249944 /* UserNotification.swift */; };
 		59EF2AD522826E9D00249944 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF2AD422826E9D00249944 /* NotificationManager.swift */; };
 		59EF2AD622826E9D00249944 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EF2AD422826E9D00249944 /* NotificationManager.swift */; };
+		59F69D3B22A81669006D05EE /* OptionalNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F69D3A22A81669006D05EE /* OptionalNotificationViewController.swift */; };
+		59F69D3C22A81669006D05EE /* OptionalNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F69D3A22A81669006D05EE /* OptionalNotificationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,9 +97,9 @@
 		592A176D22949AF200B7F675 /* ParameterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterViewController.swift; sourceTree = "<group>"; };
 		592A17702295B80500B7F675 /* ParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterView.swift; sourceTree = "<group>"; };
 		592A17732295F95100B7F675 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		59347E5A22835D6A0077396E /* UnauthorizedUserNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthorizedUserNotificationView.swift; sourceTree = "<group>"; };
+		59347E5A22835D6A0077396E /* OptionalNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalNotificationView.swift; sourceTree = "<group>"; };
 		5936A38B2266507A00023586 /* PomodoroPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroPresenter.swift; sourceTree = "<group>"; };
-		593A00D1226588C80028EAD4 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		593A00D1226588C80028EAD4 /* TimeKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeKeeper.swift; sourceTree = "<group>"; };
 		593A00D2226588C80028EAD4 /* PomodoroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroViewController.swift; sourceTree = "<group>"; };
 		59408030226284A600E9513A /* PomodoroParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroParameter.swift; sourceTree = "<group>"; };
 		594080322262864800E9513A /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		59EF2AD122826E0F00249944 /* UserNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotification.swift; sourceTree = "<group>"; };
 		59EF2AD422826E9D00249944 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		59F511A622A32C8D00766603 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		59F69D3A22A81669006D05EE /* OptionalNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalNotificationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,7 +249,7 @@
 				59BDED8022636F3400FFBB69 /* OutputBoundary.swift */,
 				594080322262864800E9513A /* Parameter.swift */,
 				59EF2AD122826E0F00249944 /* UserNotification.swift */,
-				593A00D1226588C80028EAD4 /* Timer.swift */,
+				593A00D1226588C80028EAD4 /* TimeKeeper.swift */,
 				5984E1AF22617646009C5CFC /* PomodoroUseCase.swift */,
 				59C61314226AA7CA00B4D5EA /* PomodoUseCase+Implementation.swift */,
 			);
@@ -274,8 +277,8 @@
 		597E50A62272A235001E374D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				59347E5A22835D6A0077396E /* OptionalNotificationView.swift */,
 				597E50A72272A268001E374D /* PomodoroView.swift */,
-				59347E5A22835D6A0077396E /* UnauthorizedUserNotificationView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				597E50A62272A235001E374D /* Views */,
+				59F69D3A22A81669006D05EE /* OptionalNotificationViewController.swift */,
 				593A00D2226588C80028EAD4 /* PomodoroViewController.swift */,
 				595B49C6226D768900D84EE8 /* PomodoroViewController+Implementation.swift */,
 			);
@@ -459,7 +463,7 @@
 				5928DB7222886CC300E8EF9D /* NotificationManager+Implementation.swift in Sources */,
 				59EF2AD522826E9D00249944 /* NotificationManager.swift in Sources */,
 				596DB6BA2298AA6D00E293FF /* ParameterUserInterface.swift in Sources */,
-				593A00D9226588C80028EAD4 /* Timer.swift in Sources */,
+				593A00D9226588C80028EAD4 /* TimeKeeper.swift in Sources */,
 				59BDED842263819B00FFBB69 /* InputBoundary.swift in Sources */,
 				59550FBF2273DD8400F48DEC /* UIColor.swift in Sources */,
 				5906A1A5226F992200CD61D0 /* Factory+Implementation.swift in Sources */,
@@ -473,9 +477,10 @@
 				59BDED8122636F3400FFBB69 /* OutputBoundary.swift in Sources */,
 				5984E1B022617646009C5CFC /* PomodoroUseCase.swift in Sources */,
 				596DB6BD2298AA8E00E293FF /* ParameterViewController+Implementation.swift in Sources */,
-				59347E5B22835D6A0077396E /* UnauthorizedUserNotificationView.swift in Sources */,
+				59347E5B22835D6A0077396E /* OptionalNotificationView.swift in Sources */,
 				594080332262864800E9513A /* Parameter.swift in Sources */,
 				597E50A82272A268001E374D /* PomodoroView.swift in Sources */,
+				59F69D3B22A81669006D05EE /* OptionalNotificationViewController.swift in Sources */,
 				596DB6C02298AB0F00E293FF /* ParameterPresenter.swift in Sources */,
 				59C61315226AA7CA00B4D5EA /* PomodoUseCase+Implementation.swift in Sources */,
 				5988B69B225FAE5A0034F848 /* AppDelegate.swift in Sources */,
@@ -502,15 +507,16 @@
 				5984E1B122617646009C5CFC /* PomodoroUseCase.swift in Sources */,
 				594080342262864800E9513A /* Parameter.swift in Sources */,
 				592A17752295F95100B7F675 /* String.swift in Sources */,
-				59347E5C22835F2A0077396E /* UnauthorizedUserNotificationView.swift in Sources */,
+				59347E5C22835F2A0077396E /* OptionalNotificationView.swift in Sources */,
 				596DB6B82298AA3E00E293FF /* ParameterOutputBoundary.swift in Sources */,
 				596DB6B52298A8CD00E293FF /* ParameterInputBoundary.swift in Sources */,
 				5936A3912266571A00023586 /* PomodoroViewController.swift in Sources */,
+				59F69D3C22A81669006D05EE /* OptionalNotificationViewController.swift in Sources */,
 				59C61319226AAD2900B4D5EA /* PomodoroPresenter+Implementation.swift in Sources */,
 				5940803C22628E9100E9513A /* PomodorUserPreferenceTests.swift in Sources */,
 				592A17722295B80500B7F675 /* ParameterView.swift in Sources */,
 				59550FC02273DDC800F48DEC /* UIColor.swift in Sources */,
-				59364CF5227E15CE003214B3 /* Timer.swift in Sources */,
+				59364CF5227E15CE003214B3 /* TimeKeeper.swift in Sources */,
 				593E205B2272B943006F7173 /* NSLayoutConstraint.swift in Sources */,
 				59EF2AD322826E0F00249944 /* UserNotification.swift in Sources */,
 				593A153C2262C221009F9D66 /* PomodoroParameter.swift in Sources */,

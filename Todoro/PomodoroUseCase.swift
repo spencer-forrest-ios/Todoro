@@ -13,14 +13,15 @@ class PomodoroUseCase {
   var outputBoundary: OutputBoundary
   var parameter: Parameter
   var userNotification: UserNotification
-  var timer: Timer
+  var timeKeeper: TimeKeeper
+  var timer: Timer!
   
   init() {
     parameter = Factory.pomodoroUserPreference.make()
     outputBoundary = Factory.pomodoroOutputBoundary.make()
     userNotification = Factory.pomodoroUserNotification.make()
     
-    timer = Timer()
+    timeKeeper = TimeKeeper()
     parameter.setDefaultValue(pomodoroDuration: 25 * 60,
                               shortRestDuration: 5 * 60,
                               longRestDuration: 30 * 60,
@@ -28,12 +29,12 @@ class PomodoroUseCase {
   }
   
   func checkOnTimerStatus() {
-    timer = parameter.loadTimer()
+    timeKeeper = parameter.loadTimer()
     
-    if timer.isOver {
+    if timeKeeper.isOver {
       setNextTimer()
     }
-    else if timer.isRunning {
+    else if timeKeeper.isRunning {
       setCurrentTimer()
     }
   }
@@ -43,12 +44,25 @@ class PomodoroUseCase {
     return isFourthPomodoro ? parameter.longRestDuration : parameter.shortRestDuration
   }
   
+  func endTimer() {
+    if timer != nil && timer.isValid {
+      timer.invalidate()
+    }
+  }
+    
   private func setCurrentTimer() {
-    switch timer.type {
+    let duration = timeKeeper.finish! - Date().timeIntervalSinceReferenceDate
+    timer = Timer.scheduledTimer(timeInterval: duration,
+                                 target: self,
+                                 selector: #selector(setNextTimer),
+                                 userInfo: nil,
+                                 repeats: false)
+    
+    switch timeKeeper.type {
     case .pomodoro:
-      outputBoundary.setCurrentPomodoroLayout(count: timer.count)
+      outputBoundary.setCurrentPomodoroLayout(count: timeKeeper.count)
     case .rest:
-      outputBoundary.setCurrentRestLayout(count: timer.count)
+      outputBoundary.setCurrentRestLayout(count: timeKeeper.count)
     }
   }
 }

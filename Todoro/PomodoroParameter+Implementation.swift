@@ -21,20 +21,20 @@ extension PomodoroParameter: Parameter {
     DefaultValue.maxPomodori = maxPomodori
   }
   
-  func save(_ timeKeeper: Timer) {
+  func save(_ timeKeeper: TimeKeeper) {
     UserDefaults.standard.set(timeKeeper.finish, forKey: Key.finishTimeInterval)
     UserDefaults.standard.set(timeKeeper.isRunning, forKey: Key.isRunning)
     UserDefaults.standard.set(timeKeeper.count, forKey: Key.timerCount)
     UserDefaults.standard.set(timeKeeper.type.rawValue, forKey: Key.timerType)
   }
   
-  func loadTimer() -> Timer {
+  func loadTimer() -> TimeKeeper {
     let finish = UserDefaults.standard.value(forKey: Key.finishTimeInterval) as? Double
     let isRunning = UserDefaults.standard.value(forKey: Key.isRunning) as? Bool ?? DefaultValue.isRunning
     let count = UserDefaults.standard.value(forKey: Key.timerCount) as? Int ?? DefaultValue.timerCount
     let type = UserDefaults.standard.value(forKey: Key.timerType) as? String ?? DefaultValue.timerType
     
-    return Timer(finish: finish,
+    return TimeKeeper(finish: finish,
                  isRunning: isRunning,
                  count: count,
                  type: type)
@@ -89,6 +89,19 @@ extension PomodoroParameter: Parameter {
     set {
       let key = Key.longRestDuration
       setDuration(key, newValue)
+    }
+  }
+  
+  var isNotificationsOptional: Bool {
+    get {
+      let key = Key.isNotificationsOptional
+      let defaultValue = DefaultValue.isNotificationsOptional
+      return UserDefaults.standard.value(forKey: key) as? Bool ?? defaultValue
+    }
+    
+    set {
+      let key = Key.isNotificationsOptional
+      UserDefaults.standard.set(newValue, forKey: key)
     }
   }
 }

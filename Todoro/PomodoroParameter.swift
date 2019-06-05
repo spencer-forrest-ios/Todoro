@@ -21,6 +21,7 @@ class PomodoroParameter {
     static let timerCount = "timerCount"
     static let isRunning = "isRunning"
     static let finishTimeInterval = "timeInterval"
+    static let isNotificationsOptional = "isNotificationsOptional"
   }
   
   class DefaultValue {
@@ -31,6 +32,7 @@ class PomodoroParameter {
     static let timerType = "Pomodoro"
     static let timerCount = 0
     static let isRunning = false
+    static let isNotificationsOptional = false
   }
   
   func setDuration(_ key: String, _ value: Double) {

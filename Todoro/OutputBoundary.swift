@@ -7,8 +7,8 @@
 //
 
 protocol OutputBoundary {
-  func setUnauthorizedLayout()
-  func setAuthorizedLayout()
+  func addOptionalNotificationLayout()
+  func removeOptionalNotificationLayout(isAnimated: Bool)
   
   func setCurrentPomodoroLayout(count: Int)
   func setCurrentRestLayout(count: Int)

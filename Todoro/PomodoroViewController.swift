@@ -14,7 +14,7 @@ class PomodoroViewController : UIViewController {
   lazy var inputBoundary: InputBoundary = Factory.pomodoroInputBoundary.make()
   
   var pomodoroView: PomodoroView!
-  var unauthorizedUserNotificationView: UnauthorizedUserNotificationView!
+  var optionalNotificationViewController: OptionalNotificationViewController!
   var state = State.start
   
   enum State {
@@ -53,6 +53,10 @@ class PomodoroViewController : UIViewController {
     inputBoundary.applicationWillEnterForeground()
   }
   
+  func applicationDidEnterBackground() {
+    inputBoundary.applicationDidEnterBackground()
+  }
+  
   func askUserNotificationPermission() {
     // Request permission to display alerts and play sounds.
     UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {
@@ -60,29 +64,7 @@ class PomodoroViewController : UIViewController {
       self.applicationWillEnterForeground()
     }
   }
-  
-  @objc func openSettings() {
-    guard let settingsUrl = URL(string: UIApplication.openSettingsURLString)
-      else { return }
     
-    if UIApplication.shared.canOpenURL(settingsUrl) {
-      UIApplication.shared.open(settingsUrl, completionHandler: nil)
-    }
-  }
-  
-  func setUserNotificationPermissionViewContraints() {
-    if let view = unauthorizedUserNotificationView {
-      let margin = self.view.layoutMarginsGuide
-      let constraints = [
-        view.leftAnchor.constraint(equalTo: margin.leftAnchor),
-        view.rightAnchor.constraint(equalTo: margin.rightAnchor),
-        view.topAnchor.constraint(equalTo: margin.topAnchor),
-        view.bottomAnchor.constraint(equalTo: margin.bottomAnchor)
-      ]
-      NSLayoutConstraint.activate(constraints)
-    }
-  }
-  
   @objc private func topButtonTapped() {
     inputBoundary.nextTimerButtonTapped()
   }

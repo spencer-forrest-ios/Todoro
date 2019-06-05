@@ -12,11 +12,12 @@ protocol Parameter {
                         longRestDuration: Double,
                         maxPomodori: Int)
   
-  func save(_ : Timer)
-  func loadTimer() -> Timer
+  func save(_ : TimeKeeper)
+  func loadTimer() -> TimeKeeper
   
   var maxPomodori: Int { get set }
   var pomodoroDuration: Double { get set }
   var shortRestDuration: Double { get set }
   var longRestDuration: Double { get set }
+  var isNotificationsOptional: Bool { get set }
 }

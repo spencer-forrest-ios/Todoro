@@ -32,29 +32,29 @@ extension PomodoroPresenter: OutputBoundary {
                             negative: negative)
   }
   
-  func setUnauthorizedLayout() {
+  func addOptionalNotificationLayout() {
     
-    let requirementsTitle = "Notifications needed:\n\n"
+    let requirementsTitle = "Enhanced user experience with notifications:\n"
     let requirementsText =
-      "– A banner is displayed when a timer (rest or pomodoro) is over while the app is in the 'background'\n\n"
-      + "– A sound is played when a timer (rest or pomodoro) is over while the app is in the 'foreground'\n\n\n"
+      "\n– A banner is displayed when a timer (rest or pomodoro) is over while the app is in the 'background'\n\n"
+      + "– A sound is played when a timer (rest or pomodoro) is over while the app is in the 'foreground'\n\n"
     
-    let instructionsTitle = "How to activate:\n\n"
+    let instructionsTitle = "How to activate:\n"
     let instructionsText =
-      "1) Tap 'Go to Settings'\n"
+      "\n1) Tap 'Go to Settings'\n"
       + "2) Select 'Notifications'\n"
       + "3) Activate 'Allow Notifications'\n"
       + "4) Activate 'Banners'\n"
       + "5) Activate 'Sounds'\n"
     
-    userInterface.addUnauthorizedView(requirementsTitle: requirementsTitle,
+    userInterface.addOptionalNotificationView(requirementsTitle: requirementsTitle,
                                       requirementsText: requirementsText,
                                       instructionsTitle: instructionsTitle,
                                       instructionsText: instructionsText)
   }
   
-  func setAuthorizedLayout() {
-    userInterface.removeUnauthorizedView()
+  func removeOptionalNotificationLayout(isAnimated: Bool) {
+    userInterface.removeOptionalNotificationView(isAnimated: isAnimated)
   }
   
   func setCurrentPomodoroLayout(count: Int) {
