@@ -61,14 +61,6 @@ class ParameterView: UIView {
     return label
   }()
   
-  let maxPomodoriLabel: UILabel = {
-    let label = UILabel()
-    label.text = "Maximum number of pomodori:"
-    label.textColor = UIColor.black
-    return label
-  }()
-  
-  
   let pomodoroStackView: UIStackView = {
     let stackView = UIStackView()
     stackView.axis = .horizontal
@@ -130,12 +122,10 @@ class ParameterView: UIView {
     longRestStackView.addArrangedSubview(self.longRestLabel)
     longRestStackView.addArrangedSubview(self.longRestTextField)
     
-    maxPomodoriStackView.addArrangedSubview(self.maxPomodoriLabel)
-    
     mainStackView.addArrangedSubview(self.pomodoroStackView)
     mainStackView.addArrangedSubview(self.shortRestStackView)
     mainStackView.addArrangedSubview(self.longRestStackView)
-    mainStackView.addArrangedSubview(self.maxPomodoriStackView)
+    
     addSubview(mainStackView)
     
     let constraints = [
