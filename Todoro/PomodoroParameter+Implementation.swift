@@ -12,13 +12,11 @@ extension PomodoroParameter: Parameter {
   
   func setDefaultValue(pomodoroDuration: Double,
                         shortRestDuration: Double,
-                        longRestDuration: Double,
-                        maxPomodori: Int) {
+                        longRestDuration: Double) {
     
     DefaultValue.pomodoroDuration = pomodoroDuration
     DefaultValue.shortRestDuration = shortRestDuration
     DefaultValue.longRestDuration = longRestDuration
-    DefaultValue.maxPomodori = maxPomodori
   }
   
   func save(_ timeKeeper: TimeKeeper) {
@@ -39,20 +37,7 @@ extension PomodoroParameter: Parameter {
                  count: count,
                  type: type)
   }
-  
-  var maxPomodori: Int {
-    get {
-      let key = Key.maxPomodori
-      let defaultValue = DefaultValue.maxPomodori!
-      return UserDefaults.standard.value(forKey: key) as? Int ?? defaultValue
-    }
     
-    set {
-      let key = Key.maxPomodori
-      UserDefaults.standard.set(newValue, forKey: key)
-    }
-  }
-  
   var pomodoroDuration: Double {
     get {
       let key = Key.pomodoroDuration

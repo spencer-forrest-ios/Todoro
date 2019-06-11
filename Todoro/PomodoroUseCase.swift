@@ -24,8 +24,7 @@ class PomodoroUseCase {
     timeKeeper = TimeKeeper()
     parameter.setDefaultValue(pomodoroDuration: 25 * 60,
                               shortRestDuration: 5 * 60,
-                              longRestDuration: 30 * 60,
-                              maxPomodori: 5)
+                              longRestDuration: 30 * 60)
   }
   
   func checkOnTimerStatus() {
@@ -44,7 +43,7 @@ class PomodoroUseCase {
     return isFourthPomodoro ? parameter.longRestDuration : parameter.shortRestDuration
   }
   
-  func endTimer() {
+  func invalidateTimer() {
     if timer != nil && timer.isValid {
       timer.invalidate()
     }

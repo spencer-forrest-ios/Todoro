@@ -29,7 +29,6 @@ class ParameterViewController: UIViewController {
     paramaterView.pomodoroTextField.delegate = self
     paramaterView.longRestTextField.delegate = self
     paramaterView.shortRestTextField.delegate = self
-    paramaterView.maxPomodoriTextField.delegate = self
     
     view.addSubview(paramaterView)
     let margins = view.layoutMarginsGuide
@@ -54,7 +53,6 @@ class ParameterViewController: UIViewController {
     dismissKeyboard()
     inputBoundary.saveButtonTapped(pomodoro: paramaterView.pomodoroTextField.text,
                                    shortRest: paramaterView.shortRestTextField.text,
-                                   longRest: paramaterView.longRestTextField.text,
-                                   maxPomodori: paramaterView.maxPomodoriTextField.text)
+                                   longRest: paramaterView.longRestTextField.text)
   }
 }

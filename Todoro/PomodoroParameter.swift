@@ -16,7 +16,6 @@ class PomodoroParameter {
     static let pomodoroDuration = "pomodoroDuration"
     static let isPomodoro = "isPomodoro"
     static let count = "count"
-    static let maxPomodori = "maxPomodori"
     static let timerType = "timerType"
     static let timerCount = "timerCount"
     static let isRunning = "isRunning"
@@ -28,7 +27,6 @@ class PomodoroParameter {
     static var longRestDuration: Double!
     static var shortRestDuration: Double!
     static var pomodoroDuration: Double!
-    static var maxPomodori: Int!
     static let timerType = "Pomodoro"
     static let timerCount = 0
     static let isRunning = false

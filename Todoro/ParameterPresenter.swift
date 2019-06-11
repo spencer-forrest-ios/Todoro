@@ -15,8 +15,7 @@ class ParameterPresenter: ParameterOutputBoundary {
   
   func setParameters(pomodoroDuration: Double,
                      shortRestDuration: Double,
-                     longRestDuration: Double,
-                     maxPomodori: Int) {
+                     longRestDuration: Double) {
     
     let pomodoro = pomodoroDuration / 60
     let shortRest = shortRestDuration / 60
@@ -24,8 +23,7 @@ class ParameterPresenter: ParameterOutputBoundary {
     
     let parameterViewModel = ParameterViewModel(pomodoroText: "\(Int(pomodoro))",
                                                 shortRestText: "\(Int(shortRest))",
-                                                longRestText: "\(Int(longRest))",
-                                                maxPomodoriText: "\(maxPomodori)")
+                                                longRestText: "\(Int(longRest))")
     
     userInterface.set(parameterViewModel)
   }

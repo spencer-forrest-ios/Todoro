@@ -17,8 +17,7 @@ class ParameterUseCase: ParameterInputBoundary {
   
   func saveButtonTapped(pomodoro: String?,
                         shortRest: String?,
-                        longRest: String?,
-                        maxPomodori: String?) {
+                        longRest: String?) {
     
     if let pomodoro = pomodoro, !pomodoro.isEmpty {
       let minimum: Double = 5 * 60
@@ -38,23 +37,15 @@ class ParameterUseCase: ParameterInputBoundary {
       parameter.longRestDuration = duration < minimum ? minimum : duration
     }
     
-    if let maxPomodori = maxPomodori, !maxPomodori.isEmpty {
-      let minimum: Int = 1
-      let duration = Int(maxPomodori) ?? 1
-      parameter.maxPomodori = duration < minimum ? minimum : duration
-    }
-    
     outputBoundary.setParameters(pomodoroDuration: parameter.pomodoroDuration,
                                  shortRestDuration: parameter.shortRestDuration,
-                                 longRestDuration: parameter.longRestDuration,
-                                 maxPomodori: parameter.maxPomodori)
+                                 longRestDuration: parameter.longRestDuration)
     outputBoundary.noticeParametersChanged()
   }
   
   func loadParameters() {
     outputBoundary.setParameters(pomodoroDuration: parameter.pomodoroDuration,
                                  shortRestDuration: parameter.shortRestDuration,
-                                 longRestDuration: parameter.longRestDuration,
-                                 maxPomodori: parameter.maxPomodori)
+                                 longRestDuration: parameter.longRestDuration)
   }
 }

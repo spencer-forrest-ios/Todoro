@@ -34,7 +34,7 @@ extension PomodoroUseCase: InputBoundary {
   }
   
   func applicationDidEnterBackground() {
-    endTimer()
+    invalidateTimer()
   }
   
   func ignoreNotificationsButtonTapped() {
@@ -45,22 +45,11 @@ extension PomodoroUseCase: InputBoundary {
   @objc func setNextTimer() {
     guard timeKeeper.isRunning else { return }
     
-    endTimer()
+    invalidateTimer()
     
     let isPomodoro = timeKeeper.type == .pomodoro
     let timerCount = timeKeeper.count
-    let maxCountReached = timerCount == parameter.maxPomodori
-    
-    if isPomodoro && maxCountReached {
-      timeKeeper.stop()
-      parameter.save(timeKeeper)
-      
-      DispatchQueue.main.async {
-        self.outputBoundary.setEndLayout()
-      }
-      return
-    }
-    
+        
     DispatchQueue.main.async {
       if isPomodoro {
         self.outputBoundary.setNextRestLayout(count: timerCount)
@@ -97,7 +86,7 @@ extension PomodoroUseCase: InputBoundary {
     guard timeKeeper.isRunning else { return }
     
     userNotification.cancelAll()
-    endTimer()
+    invalidateTimer()
     
     let isPomodoro = timeKeeper.type == .pomodoro
     let timerCount = timeKeeper.count
@@ -120,7 +109,7 @@ extension PomodoroUseCase: InputBoundary {
   func agreedToStop() {
     outputBoundary.setStartingLayout()
     userNotification.cancelAll()
-    endTimer()
+    invalidateTimer()
     timeKeeper.stop()
     parameter.save(timeKeeper)
   }

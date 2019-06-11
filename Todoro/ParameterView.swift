@@ -40,16 +40,6 @@ class ParameterView: UIView {
     return textField
   }()
   
-  let maxPomodoriTextField: UITextField = {
-    let textField = UITextField()
-    textField.keyboardType = .numberPad
-    textField.keyboardAppearance = .dark
-    textField.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 220/255)
-    textField.layer.cornerRadius = 3
-    textField.clipsToBounds = true
-    return textField
-  }()
-  
   let pomodoroLabel: UILabel = {
     let label = UILabel()
     label.text = "Pomodoro duration in minutes:"
@@ -141,7 +131,6 @@ class ParameterView: UIView {
     longRestStackView.addArrangedSubview(self.longRestTextField)
     
     maxPomodoriStackView.addArrangedSubview(self.maxPomodoriLabel)
-    maxPomodoriStackView.addArrangedSubview(self.maxPomodoriTextField)
     
     mainStackView.addArrangedSubview(self.pomodoroStackView)
     mainStackView.addArrangedSubview(self.shortRestStackView)
@@ -153,7 +142,6 @@ class ParameterView: UIView {
       pomodoroTextField.widthAnchor.constraint(equalToConstant: 33),
       shortRestTextField.widthAnchor.constraint(equalToConstant: 33),
       longRestTextField.widthAnchor.constraint(equalToConstant: 33),
-      maxPomodoriTextField.widthAnchor.constraint(equalToConstant: 33),
       
       mainStackView.topAnchor.constraint(equalTo: self.topAnchor),
       mainStackView.leftAnchor.constraint(equalTo: self.leftAnchor),

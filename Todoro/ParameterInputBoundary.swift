@@ -9,7 +9,6 @@
 protocol ParameterInputBoundary {
   func saveButtonTapped(pomodoro: String?,
                         shortRest: String?,
-                        longRest: String?,
-                        maxPomodori: String?)
+                        longRest: String?)
   func loadParameters()
 }

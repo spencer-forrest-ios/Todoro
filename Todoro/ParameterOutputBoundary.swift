@@ -9,7 +9,6 @@
 protocol ParameterOutputBoundary {
   func setParameters(pomodoroDuration: Double,
                      shortRestDuration: Double,
-                     longRestDuration: Double,
-                     maxPomodori: Int)
+                     longRestDuration: Double)
   func noticeParametersChanged()
 }

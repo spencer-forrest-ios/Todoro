@@ -17,7 +17,6 @@ struct ParameterViewModel {
   private(set) var pomodoroText: String?
   private(set) var shortRestText: String?
   private(set) var longRestText: String?
-  private(set) var maxPomodoriText: String?
   
   private(set) var title: String?
   private(set) var message: String?
@@ -34,7 +33,6 @@ struct ParameterViewModel {
     self.pomodoroText = pomodoroText
     self.shortRestText = shortRestText
     self.longRestText = longRestText
-    self.maxPomodoriText = maxPomodoriText
     
     self.title = title
     self.message = message

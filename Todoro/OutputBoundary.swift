@@ -15,7 +15,6 @@ protocol OutputBoundary {
   func setNextRestLayout(count: Int)
   func setNextPomodoroLayout(count: Int)
   func setStartingLayout()
-  func setEndLayout()
   
   func askUserToSkipRest()
   func askUserToStop()

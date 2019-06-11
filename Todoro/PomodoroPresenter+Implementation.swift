@@ -98,22 +98,7 @@ extension PomodoroPresenter: OutputBoundary {
     
     userInterface.setLayout(viewModel)
   }
-  
-  func setEndLayout() {
-    let text = "All pomodori are completed."
-    let title = "Start Over"
     
-    let viewModel = ViewModel(statusLabelColor: .black,
-                              statusLabelText: text,
-                              middleButtonTitle: title,
-                              isTopButtonHidden: true,
-                              isMiddleButtonHidden: false,
-                              isStartButton: true)
-    
-    
-    userInterface.setLayout(viewModel)
-  }
-  
   func setNextPomodoroLayout(count: Int) {
     let text = "Waiting for Pomodoro \(count) to start"
     let title = "Start Pomodoro \(count)"

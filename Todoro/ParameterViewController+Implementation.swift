@@ -15,7 +15,6 @@ extension ParameterViewController: ParameterUserInterface {
     paramaterView.pomodoroTextField.text = parameter.pomodoroText
     paramaterView.shortRestTextField.text = parameter.shortRestText
     paramaterView.longRestTextField.text = parameter.longRestText
-    paramaterView.maxPomodoriTextField.text = parameter.maxPomodoriText
   }
   
   func alertParameterSaved(_ parameter: ParameterViewModel) {
