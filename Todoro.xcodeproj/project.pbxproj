@@ -153,6 +153,136 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5911434222C3C44A003F4159 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59347E5A22835D6A0077396E /* OptionalNotificationView.swift */,
+				597E50A72272A268001E374D /* PomodoroView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5911434322C3C464003F4159 /* User Interface Layer */ = {
+			isa = PBXGroup;
+			children = (
+				5911434222C3C44A003F4159 /* Views */,
+				59F69D3A22A81669006D05EE /* OptionalNotificationViewController.swift */,
+				593A00D2226588C80028EAD4 /* PomodoroViewController.swift */,
+				595B49C6226D768900D84EE8 /* PomodoroViewController+Implementation.swift */,
+			);
+			path = "User Interface Layer";
+			sourceTree = "<group>";
+		};
+		5911434422C3C47F003F4159 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				594F95E3226D6761002581D8 /* UserInterface.swift */,
+				5936A38B2266507A00023586 /* PomodoroPresenter.swift */,
+				59C61317226AAD2900B4D5EA /* PomodoroPresenter+Implementation.swift */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		5911434522C3C4A9003F4159 /* Business Layer */ = {
+			isa = PBXGroup;
+			children = (
+				59BDED832263819B00FFBB69 /* InputBoundary.swift */,
+				59BDED8022636F3400FFBB69 /* OutputBoundary.swift */,
+				594080322262864800E9513A /* Parameter.swift */,
+				59EF2AD122826E0F00249944 /* UserNotification.swift */,
+				593A00D1226588C80028EAD4 /* TimeKeeper.swift */,
+				5984E1AF22617646009C5CFC /* PomodoroUseCase.swift */,
+				59C61314226AA7CA00B4D5EA /* PomodoUseCase+Implementation.swift */,
+			);
+			path = "Business Layer";
+			sourceTree = "<group>";
+		};
+		5911434822C3C4D8003F4159 /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				59408030226284A600E9513A /* PomodoroParameter.swift */,
+				5906A1A7226FA3F300CD61D0 /* PomodoroParameter+Implementation.swift */,
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		5911434922C3C4F2003F4159 /* UserNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				59EF2AD422826E9D00249944 /* NotificationManager.swift */,
+				5928DB7122886CC300E8EF9D /* NotificationManager+Implementation.swift */,
+			);
+			path = UserNotifications;
+			sourceTree = "<group>";
+		};
+		5911434B22C3C52E003F4159 /* Pomodoro */ = {
+			isa = PBXGroup;
+			children = (
+				5911434522C3C4A9003F4159 /* Business Layer */,
+				5911434322C3C464003F4159 /* User Interface Layer */,
+				5911434422C3C47F003F4159 /* Presentation Layer */,
+				5911434822C3C4D8003F4159 /* Data Layer */,
+				5911434922C3C4F2003F4159 /* UserNotifications */,
+			);
+			path = Pomodoro;
+			sourceTree = "<group>";
+		};
+		5911434C22C3C544003F4159 /* Parameter */ = {
+			isa = PBXGroup;
+			children = (
+				5911435022C3C5BD003F4159 /* Business Layer */,
+				5911434F22C3C5A7003F4159 /* Presentation Layer */,
+				5911434D22C3C56E003F4159 /* User Interface Layer */,
+			);
+			path = Parameter;
+			sourceTree = "<group>";
+		};
+		5911434D22C3C56E003F4159 /* User Interface Layer */ = {
+			isa = PBXGroup;
+			children = (
+				5911434E22C3C581003F4159 /* Views */,
+				592A176D22949AF200B7F675 /* ParameterViewController.swift */,
+				596DB6BC2298AA8E00E293FF /* ParameterViewController+Implementation.swift */,
+			);
+			path = "User Interface Layer";
+			sourceTree = "<group>";
+		};
+		5911434E22C3C581003F4159 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				592A17702295B80500B7F675 /* ParameterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5911434F22C3C5A7003F4159 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				596DB6B92298AA6D00E293FF /* ParameterUserInterface.swift */,
+				596DB6BF2298AB0F00E293FF /* ParameterPresenter.swift */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		5911435022C3C5BD003F4159 /* Business Layer */ = {
+			isa = PBXGroup;
+			children = (
+				596DB6B32298A8CD00E293FF /* ParameterInputBoundary.swift */,
+				596DB6B62298AA3E00E293FF /* ParameterOutputBoundary.swift */,
+				596DB6C52298AB9300E293FF /* ParameterUseCase.swift */,
+			);
+			path = "Business Layer";
+			sourceTree = "<group>";
+		};
+		5911435122C3C5D7003F4159 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				59C6131A226AADB700B4D5EA /* Factory.swift */,
+				5906A1A4226F992200CD61D0 /* Factory+Implementation.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		5936A3932266598100023586 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,116 +301,6 @@
 				596BBF96226BA9DB006962DE /* PomodoroUseCaseTests.swift */,
 			);
 			path = Pomodoro;
-			sourceTree = "<group>";
-		};
-		596DB6AD2298A41300E293FF /* Parameter */ = {
-			isa = PBXGroup;
-			children = (
-				596DB6B12298A7E000E293FF /* User Interface Layer */,
-				596DB6B02298A7D600E293FF /* Presentation Layer */,
-				596DB6AF2298A7B900E293FF /* Business Layer */,
-			);
-			name = Parameter;
-			sourceTree = "<group>";
-		};
-		596DB6AF2298A7B900E293FF /* Business Layer */ = {
-			isa = PBXGroup;
-			children = (
-				596DB6B32298A8CD00E293FF /* ParameterInputBoundary.swift */,
-				596DB6B62298AA3E00E293FF /* ParameterOutputBoundary.swift */,
-				596DB6C52298AB9300E293FF /* ParameterUseCase.swift */,
-			);
-			name = "Business Layer";
-			sourceTree = "<group>";
-		};
-		596DB6B02298A7D600E293FF /* Presentation Layer */ = {
-			isa = PBXGroup;
-			children = (
-				596DB6B92298AA6D00E293FF /* ParameterUserInterface.swift */,
-				596DB6BF2298AB0F00E293FF /* ParameterPresenter.swift */,
-			);
-			name = "Presentation Layer";
-			sourceTree = "<group>";
-		};
-		596DB6B12298A7E000E293FF /* User Interface Layer */ = {
-			isa = PBXGroup;
-			children = (
-				596DB6B22298A7F100E293FF /* Views */,
-				592A176D22949AF200B7F675 /* ParameterViewController.swift */,
-				596DB6BC2298AA8E00E293FF /* ParameterViewController+Implementation.swift */,
-			);
-			name = "User Interface Layer";
-			sourceTree = "<group>";
-		};
-		596DB6B22298A7F100E293FF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				592A17702295B80500B7F675 /* ParameterView.swift */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
-		597E509E2270E2D7001E374D /* Pomodoro */ = {
-			isa = PBXGroup;
-			children = (
-				59B9A319228DBBC90053EF20 /* User Interface Layer */,
-				597E509F2270E2F1001E374D /* Presentation Layer */,
-				597E50A02270E300001E374D /* Business Layer */,
-				597E50A12270E327001E374D /* Data Layer */,
-				59EF2AD022826DD300249944 /* UserNotifications */,
-			);
-			name = Pomodoro;
-			sourceTree = "<group>";
-		};
-		597E509F2270E2F1001E374D /* Presentation Layer */ = {
-			isa = PBXGroup;
-			children = (
-				594F95E3226D6761002581D8 /* UserInterface.swift */,
-				5936A38B2266507A00023586 /* PomodoroPresenter.swift */,
-				59C61317226AAD2900B4D5EA /* PomodoroPresenter+Implementation.swift */,
-			);
-			name = "Presentation Layer";
-			sourceTree = "<group>";
-		};
-		597E50A02270E300001E374D /* Business Layer */ = {
-			isa = PBXGroup;
-			children = (
-				59BDED832263819B00FFBB69 /* InputBoundary.swift */,
-				59BDED8022636F3400FFBB69 /* OutputBoundary.swift */,
-				594080322262864800E9513A /* Parameter.swift */,
-				59EF2AD122826E0F00249944 /* UserNotification.swift */,
-				593A00D1226588C80028EAD4 /* TimeKeeper.swift */,
-				5984E1AF22617646009C5CFC /* PomodoroUseCase.swift */,
-				59C61314226AA7CA00B4D5EA /* PomodoUseCase+Implementation.swift */,
-			);
-			name = "Business Layer";
-			sourceTree = "<group>";
-		};
-		597E50A12270E327001E374D /* Data Layer */ = {
-			isa = PBXGroup;
-			children = (
-				59408030226284A600E9513A /* PomodoroParameter.swift */,
-				5906A1A7226FA3F300CD61D0 /* PomodoroParameter+Implementation.swift */,
-			);
-			name = "Data Layer";
-			sourceTree = "<group>";
-		};
-		597E50A22270E3AF001E374D /* Factory Files */ = {
-			isa = PBXGroup;
-			children = (
-				59C6131A226AADB700B4D5EA /* Factory.swift */,
-				5906A1A4226F992200CD61D0 /* Factory+Implementation.swift */,
-			);
-			name = "Factory Files";
-			sourceTree = "<group>";
-		};
-		597E50A62272A235001E374D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				59347E5A22835D6A0077396E /* OptionalNotificationView.swift */,
-				597E50A72272A268001E374D /* PomodoroView.swift */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		597E50A92272A618001E374D /* Helper Extensions */ = {
@@ -316,9 +336,9 @@
 			isa = PBXGroup;
 			children = (
 				5988B69A225FAE5A0034F848 /* AppDelegate.swift */,
-				597E509E2270E2D7001E374D /* Pomodoro */,
-				596DB6AD2298A41300E293FF /* Parameter */,
-				597E50A22270E3AF001E374D /* Factory Files */,
+				5911434B22C3C52E003F4159 /* Pomodoro */,
+				5911434C22C3C544003F4159 /* Parameter */,
+				5911435122C3C5D7003F4159 /* Factory */,
 				597E50A92272A618001E374D /* Helper Extensions */,
 				5936A3932266598100023586 /* Supporting Files */,
 			);
@@ -332,26 +352,6 @@
 				5988B6B4225FAE5B0034F848 /* Info.plist */,
 			);
 			path = TodoroTests;
-			sourceTree = "<group>";
-		};
-		59B9A319228DBBC90053EF20 /* User Interface Layer */ = {
-			isa = PBXGroup;
-			children = (
-				597E50A62272A235001E374D /* Views */,
-				59F69D3A22A81669006D05EE /* OptionalNotificationViewController.swift */,
-				593A00D2226588C80028EAD4 /* PomodoroViewController.swift */,
-				595B49C6226D768900D84EE8 /* PomodoroViewController+Implementation.swift */,
-			);
-			name = "User Interface Layer";
-			sourceTree = "<group>";
-		};
-		59EF2AD022826DD300249944 /* UserNotifications */ = {
-			isa = PBXGroup;
-			children = (
-				59EF2AD422826E9D00249944 /* NotificationManager.swift */,
-				5928DB7122886CC300E8EF9D /* NotificationManager+Implementation.swift */,
-			);
-			name = UserNotifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -677,6 +677,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VKJGV2D92P;
 				INFOPLIST_FILE = "$(SRCROOT)/Todoro/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -697,6 +698,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VKJGV2D92P;
 				INFOPLIST_FILE = "$(SRCROOT)/Todoro/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
