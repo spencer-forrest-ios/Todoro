@@ -26,13 +26,13 @@ class ParameterUseCase: ParameterInputBoundary {
     }
     
     if let shortRest = shortRest, !shortRest.isEmpty {
-      let minimum: Double = 3 * 60
+      let minimum: Double = 5 * 60
       let duration = (Double(shortRest) ?? 5) * 60
       parameter.shortRestDuration = duration < minimum ? minimum : duration
     }
     
     if let longRest = longRest, !longRest.isEmpty {
-      let minimum: Double = 15 * 60
+      let minimum: Double = 5 * 60
       let duration = (Double(longRest) ?? 30) * 60
       parameter.longRestDuration = duration < minimum ? minimum : duration
     }
