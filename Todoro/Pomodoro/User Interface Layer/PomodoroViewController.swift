@@ -30,7 +30,7 @@ class PomodoroViewController : UIViewController {
                                                              style: .plain,
                                                              target: self,
                                                              action: #selector(rightBarButtonItemTapped))
-    view.backgroundColor = UIColor.white
+    view.backgroundColor = UIColor.systemBackground
     pomodoroView = PomodoroView()
     view.addSubview(pomodoroView)
     setConstraints()

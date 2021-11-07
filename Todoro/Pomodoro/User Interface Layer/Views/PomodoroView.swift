@@ -17,7 +17,7 @@ class PomodoroView: UIView {
     label.adjustsFontSizeToFitWidth = true
     label.textAlignment = .center
     label.baselineAdjustment = .alignCenters
-    label.textColor = UIColor.black
+    label.textColor = UIColor.label
     return label
   }()
   
@@ -34,7 +34,7 @@ class PomodoroView: UIView {
     let button = UIButton()
     button.backgroundColor = UIColor.elm
     button.setTitle("Start", for: .normal)
-    button.setTitleColor(.black, for: .highlighted)
+    button.setTitleColor(.label, for: .highlighted)
     button.layer.cornerRadius = 15
     button.clipsToBounds = true
     return button
@@ -44,7 +44,7 @@ class PomodoroView: UIView {
     let button = UIButton()
     button.backgroundColor = UIColor.red
     button.setTitle("Stop", for: .normal)
-    button.setTitleColor(.black, for: .highlighted)
+    button.setTitleColor(.label, for: .highlighted)
     button.layer.cornerRadius = 15
     button.clipsToBounds = true
     return button

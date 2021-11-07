@@ -14,7 +14,7 @@ class ParameterView: UIView {
     let textField = UITextField()
     textField.keyboardType = .numberPad
     textField.keyboardAppearance = .dark
-    textField.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 220/255)
+    textField.backgroundColor = UIColor.systemFill
     textField.layer.cornerRadius = 3
     textField.clipsToBounds = true
     return textField
@@ -24,7 +24,7 @@ class ParameterView: UIView {
     let textField = UITextField()
     textField.keyboardType = .numberPad
     textField.keyboardAppearance = .dark
-    textField.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 220/255)
+    textField.backgroundColor = UIColor.systemFill
     textField.layer.cornerRadius = 3
     textField.clipsToBounds = true
     return textField
@@ -34,7 +34,7 @@ class ParameterView: UIView {
     let textField = UITextField()
     textField.keyboardType = .numberPad
     textField.keyboardAppearance = .dark
-    textField.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 220/255)
+    textField.backgroundColor = UIColor.systemFill
     textField.layer.cornerRadius = 3
     textField.clipsToBounds = true
     return textField
@@ -43,21 +43,21 @@ class ParameterView: UIView {
   let pomodoroLabel: UILabel = {
     let label = UILabel()
     label.text = "Pomodoro duration in minutes:"
-    label.textColor = UIColor.black
+    label.textColor = UIColor.label
     return label
   }()
   
   let longRestLabel: UILabel = {
     let label = UILabel()
     label.text = "Long rest duration in minutes:"
-    label.textColor = UIColor.black
+    label.textColor = UIColor.label
     return label
   }()
   
   let shortRestLabel: UILabel = {
     let label = UILabel()
     label.text = "Short rest duration in minutes:"
-    label.textColor = UIColor.black
+    label.textColor = UIColor.label
     return label
   }()
   

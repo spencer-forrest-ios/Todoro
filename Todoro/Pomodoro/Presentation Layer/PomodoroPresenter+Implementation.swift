@@ -88,7 +88,7 @@ extension PomodoroPresenter: OutputBoundary {
     let text = "Waiting to Start a new Cycle"
     let title = "Start"
     
-    let viewModel = ViewModel(statusLabelColor: .black,
+    let viewModel = ViewModel(statusLabelColor: .label,
                               statusLabelText: text,
                               middleButtonTitle: title,
                               isTopButtonHidden: true,
@@ -103,7 +103,7 @@ extension PomodoroPresenter: OutputBoundary {
     let text = "Waiting for Pomodoro \(count) to start"
     let title = "Start Pomodoro \(count)"
     
-    let viewModel = ViewModel(statusLabelColor: .black,
+    let viewModel = ViewModel(statusLabelColor: .label,
                               statusLabelText: text,
                               topButtonTitle: title,
                               isTopButtonHidden: false,
@@ -117,7 +117,7 @@ extension PomodoroPresenter: OutputBoundary {
     let topTitle = "Start Rest \(count)"
     let middleTitle = "Skip Rest \(count)"
     
-    let viewModel = ViewModel(statusLabelColor: .black,
+    let viewModel = ViewModel(statusLabelColor: .label,
                               statusLabelText: text,
                               topButtonTitle: topTitle,
                               middleButtonTitle: middleTitle,

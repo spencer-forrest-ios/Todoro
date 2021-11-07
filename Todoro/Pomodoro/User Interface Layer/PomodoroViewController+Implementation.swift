@@ -39,48 +39,48 @@ extension PomodoroViewController: UserInterface {
     // Update Label text color
     if let color = viewModel.statusLabelColor {
       switch color {
-      case .black:
-        pomodoroView.statusLabel.textColor = UIColor.black
+      case .label:
+        pomodoroView.statusLabel.textColor = UIColor.label
       case .blue:
-        pomodoroView.statusLabel.textColor = UIColor.blue
+        pomodoroView.statusLabel.textColor = UIColor.systemBlue
       case .red:
-        pomodoroView.statusLabel.textColor = UIColor.red
+        pomodoroView.statusLabel.textColor = UIColor.systemRed
       }
     }
-    
+
     // Update Strings
     if let text = viewModel.statusLabelText {
       pomodoroView.statusLabel.text = text
     }
-    
+
     if let title = viewModel.topButtonTitle {
       pomodoroView.topButton.setTitle(title, for: .normal)
     }
-    
+
     if let title = viewModel.middleButtonTitle {
       pomodoroView.middleButton.setTitle(title, for: .normal)
     }
-    
+
     // Update 'isHidden' buttons
     if let isHidden = viewModel.isMiddleButtonHidden {
       pomodoroView.middleButton.isHidden = isHidden
     }
-    
+
     if let isHidden = viewModel.isTopButtonHidden {
       pomodoroView.topButton.isHidden = isHidden
     }
-    
+
     // Update buttons state
     if let isStartButton = viewModel.isStartButton,
       isStartButton {
       self.state = .start
     }
-    
+
     if let isSkipButton = viewModel.isSkipButton,
       isSkipButton {
       self.state = .skip
     }
-    
+
     if let isResetButton = viewModel.isResetButton,
       isResetButton {
       self.state = .reset

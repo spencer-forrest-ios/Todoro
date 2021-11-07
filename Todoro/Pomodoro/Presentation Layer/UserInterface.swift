@@ -29,7 +29,7 @@ protocol UserInterface: AnyObject {
 struct ViewModel {
   
   enum Color {
-    case black, blue, red
+    case label, blue, red
   }
   
   private(set) var statusLabelColor: Color?
